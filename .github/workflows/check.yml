@@ -1,0 +1,26 @@
+name: check
+
+# Every change keeps the tool sound: tests pass and the neon1 manifest and lockfile agree
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run tests
+        run: npm test
+      # Offline only: the manifest is valid and every lockfile entry belongs to a listed source
+      - name: Validate the neon1 manifest
+        run: node bin/refmark.mjs validate --manifest watch/neon1.json

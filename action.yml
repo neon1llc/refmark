@@ -1,0 +1,70 @@
+# Refmark as a GitHub Action: checks the sources in a manifest and reports what changed. Use it in a
+# scheduled workflow; see the README for a complete example.
+name: refmark
+description: Watch the sources your documents cite and find out when they change.
+author: neon1 LLC
+branding:
+  icon: bookmark
+  color: green
+
+inputs:
+  manifest:
+    description: Path to the manifest
+    default: refmark.json
+  report:
+    description: Where to write the Markdown report
+    default: refmark-report.md
+  link-base:
+    description: Prefix or template for "cited in" links in the report
+    default: ''
+  strict:
+    description: Treat unreachable sources as failures
+    default: 'false'
+  fail-on-change:
+    description: Fail the step when a source needs review
+    default: 'true'
+
+outputs:
+  status:
+    description: 0 when every source matches, 1 when something needs review, 2 when the run failed
+    value: ${{ steps.check.outputs.status }}
+  report:
+    description: Path to the Markdown report
+    value: ${{ inputs.report }}
+
+runs:
+  using: composite
+  steps:
+    # Installs the action's own dependency without touching the caller's project
+    - name: Install refmark
+      shell: bash
+      run: npm ci --omit=dev --no-audit --no-fund --prefix "$GITHUB_ACTION_PATH"
+
+    - name: Check sources
+      id: check
+      shell: bash
+      env:
+        MANIFEST: ${{ inputs.manifest }}
+        REPORT: ${{ inputs.report }}
+        LINK_BASE: ${{ inputs.link-base }}
+        STRICT: ${{ inputs.strict }}
+      run: |
+        set +e
+        args=(check --manifest "$MANIFEST" --report "$REPORT")
+        [ -n "$LINK_BASE" ] && args+=(--link-base "$LINK_BASE")
+        [ "$STRICT" = "true" ] && args+=(--strict)
+        node "$GITHUB_ACTION_PATH/bin/refmark.mjs" "${args[@]}"
+        status=$?
+        echo "status=$status" >> "$GITHUB_OUTPUT"
+        [ -f "$REPORT" ] && cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
+        exit 0
+
+    # Fails after the outputs are set, so a later step can still read the report
+    - name: Apply the result
+      shell: bash
+      env:
+        STATUS: ${{ steps.check.outputs.status }}
+        FAIL_ON_CHANGE: ${{ inputs.fail-on-change }}
+      run: |
+        if [ "$STATUS" = "2" ]; then exit 2; fi
+        if [ "$STATUS" = "1" ] && [ "$FAIL_ON_CHANGE" = "true" ]; then exit 1; fi

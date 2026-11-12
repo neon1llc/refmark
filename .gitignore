@@ -1,0 +1,7 @@
+# Dependencies, the snapshot cache (copies of other people's pages), and local reports
+node_modules/
+.refmark/
+report.md
+refmark-report.md
+.DS_Store
+*.log

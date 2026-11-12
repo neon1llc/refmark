@@ -1,0 +1,11 @@
+Refmark
+Copyright (c) 2026 neon1 LLC (neon1.tech)
+
+Refmark watches the sources that documents cite and reports when they change.
+https://github.com/neon1llc/refmark
+
+The code is under the MIT License, see LICENSE. The names Refmark and neon1, and
+neon1's marks, are not licensed for use as the name or branding of another product.
+
+Third-party software
+- node-html-parser, MIT License, https://github.com/taoqf/node-html-parser

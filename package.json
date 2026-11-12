@@ -1,0 +1,38 @@
+{
+  "name": "refmark",
+  "version": "0.1.0",
+  "description": "Watch the sources your documents cite and find out when they change.",
+  "type": "module",
+  "bin": {
+    "refmark": "bin/refmark.mjs"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --test test/*.test.mjs && node bin/refmark.mjs validate --manifest watch/neon1.json"
+  },
+  "keywords": [
+    "references",
+    "citations",
+    "sources",
+    "change-detection",
+    "link-rot",
+    "documentation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neon1llc/refmark.git"
+  },
+  "homepage": "https://github.com/neon1llc/refmark#readme",
+  "license": "MIT",
+  "author": "neon1 LLC (https://neon1.tech)",
+  "dependencies": {
+    "node-html-parser": "^9.0.7"
+  }
+}
