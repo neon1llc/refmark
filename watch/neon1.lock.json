@@ -11,18 +11,6 @@
       "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.993Z"
     },
-    "405d.hhs.gov": {
-      "url": "https://405d.hhs.gov/",
-      "finalUrl": "https://hhscyber.hhs.gov/",
-      "http": 200,
-      "contentType": "text/html",
-      "mode": "status",
-      "hash": "sha256:6ef788f215cfb10bfc09047fa20e07171e49557482bbddb3b5998e8d02d347dc",
-      "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "W/\"06a07acfe827cc0956b99e837de5cd31\"",
-      "lastModified": "Thu, 18 Jun 2026 14:40:32 GMT",
-      "acceptedAt": "2026-11-12T04:19:50.994Z"
-    },
     "aarp.org-money-scams-fraud-helpline": {
       "url": "https://www.aarp.org/money/scams-fraud/helpline.html",
       "finalUrl": "https://www.aarp.org/money/scams-fraud/helpline.html",
@@ -91,16 +79,16 @@
       "etag": "W/\"45db8-PwAI0zyoAWqLpWccqMEvO6iZhR0\"",
       "acceptedAt": "2026-11-12T04:19:50.995Z"
     },
-    "aicpa-cima.com-topic-audit-assurance-audit-and-assurance-greater-than-so": {
-      "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+    "aicpa-cima.com-resources-landing-system-and-organization-controls-soc-su": {
+      "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
       "finalUrl": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
       "http": 200,
       "contentType": "text/html; charset=utf-8",
       "mode": "html",
       "hash": "sha256:6a485ab8053d4fd0a2b003a909e5cc2913390401a37872b2719a3e76cbab3e2f",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "W/\"6da27-YZMdpOKR93ldfdtuzEfRBcKtMoU\"",
-      "acceptedAt": "2026-11-12T04:19:50.995Z"
+      "etag": "W/\"6da27-EvaDAGK6zhxvXEwvzuNosnIZ2H8\"",
+      "acceptedAt": "2026-11-12T04:40:00.693Z"
     },
     "api.ctia.org-wp-content-uploads-2023-05-230523-ctia-messaging-principles": {
       "url": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf",
@@ -113,6 +101,17 @@
       "etag": "\"646f58db-3ee80\"",
       "lastModified": "Thu, 25 May 2023 12:47:23 GMT",
       "acceptedAt": "2026-11-12T04:19:50.995Z"
+    },
+    "asvs.owasp.org": {
+      "url": "https://asvs.owasp.org/",
+      "finalUrl": "https://asvs.owasp.org/",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "status",
+      "hash": "sha256:6ef788f215cfb10bfc09047fa20e07171e49557482bbddb3b5998e8d02d347dc",
+      "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Mon, 26 Oct 2026 20:42:35 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.693Z"
     },
     "atlassian.com-incident-management-handbook": {
       "url": "https://www.atlassian.com/incident-management/handbook",
@@ -267,6 +266,16 @@
       "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.997Z"
     },
+    "cisa.gov-audiences-small-and-medium-businesses-secure-your-business-back": {
+      "url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "finalUrl": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:0ccaa211b406b18f09313f96b222aa4ddf07b829d8e976b4cbe89cc582ce76c3",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.693Z"
+    },
     "cisa.gov-cross-sector-cybersecurity-performance-goals": {
       "url": "https://www.cisa.gov/cross-sector-cybersecurity-performance-goals",
       "finalUrl": "https://www.cisa.gov/cross-sector-cybersecurity-performance-goals",
@@ -276,6 +285,26 @@
       "hash": "sha256:df0dfae9069c76746735105288d684b8fcc193e8efa29ad7d0cab67833073a9c",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.997Z"
+    },
+    "cisa.gov-cyber-hygiene-services": {
+      "url": "https://www.cisa.gov/cyber-hygiene-services",
+      "finalUrl": "https://www.cisa.gov/cyber-hygiene-services",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:e450ca6cf5e19691c85d60c7dfc9119d7d5933e05508f198068c901673fb97e4",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.694Z"
+    },
+    "cisa.gov-cybersecurity-awareness-month": {
+      "url": "https://www.cisa.gov/cybersecurity-awareness-month",
+      "finalUrl": "https://www.cisa.gov/cybersecurity-awareness-month",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:c5457c96ef4fbf0c76a7d2dcef624921935acc9dc22deb315b6323019e8865a3",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.694Z"
     },
     "cisa.gov-known-exploited-vulnerabilities-catalog": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
@@ -317,16 +346,6 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.998Z"
     },
-    "cisa.gov-resources-tools-services-cisa-vulnerability-scanning": {
-      "url": "https://www.cisa.gov/resources-tools/services/cisa-vulnerability-scanning",
-      "finalUrl": "https://www.cisa.gov/resources-tools/resources/no-cost-cybersecurity-services-and-tools",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:614aff16c24574c94efd207fd8969faf87484ad5eb0c90d33d6e15557c3c789c",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "acceptedAt": "2026-11-12T04:19:50.998Z"
-    },
     "cisa.gov-resources-tools-services-secure-cloud-business-applications-scu": {
       "url": "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
       "finalUrl": "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
@@ -334,16 +353,6 @@
       "contentType": "text/html; charset=utf-8",
       "mode": "html",
       "hash": "sha256:acd86d2614222997c7445720c9e0d8660faa9ca6e04fe55e66dc700c1b8b0d07",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "acceptedAt": "2026-11-12T04:19:50.998Z"
-    },
-    "cisa.gov-secure-our-world": {
-      "url": "https://www.cisa.gov/secure-our-world",
-      "finalUrl": "https://www.cisa.gov/cybersecurity-awareness-month",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:c5457c96ef4fbf0c76a7d2dcef624921935acc9dc22deb315b6323019e8865a3",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.998Z"
     },
@@ -455,15 +464,26 @@
       "lastModified": "Fri, 19 Sep 2025 18:37:53 GMT",
       "acceptedAt": "2026-11-12T04:19:51.000Z"
     },
-    "commission.europa.eu-strategy-and-policy-policies-justice-and-fundamenta": {
-      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+    "commission.europa.eu-strategy-and-policy-policies-justice-and-fundamenta-2": {
+      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
       "finalUrl": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
       "http": 200,
       "contentType": "text/html; charset=utf-8",
       "mode": "html",
       "hash": "sha256:353c9d9c27cb8f011eebf0ce10df9526b76a196d2e95c10d1ad5e0f9797269c0",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "acceptedAt": "2026-11-12T04:19:51.000Z"
+      "acceptedAt": "2026-11-12T04:40:00.694Z"
+    },
+    "community.owasp.org-threat-modeling": {
+      "url": "https://community.owasp.org/Threat_Modeling",
+      "finalUrl": "https://community.owasp.org/Threat_Modeling",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:78b5382278c0765e815cc44da7d01193b81eeaf45e8ade3681af3633486fa3cb",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Tue, 10 Nov 2026 17:29:44 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.694Z"
     },
     "conventionalcommits.org": {
       "url": "https://www.conventionalcommits.org/",
@@ -622,8 +642,8 @@
       "lastModified": "Fri, 09 Oct 2026 22:52:17 GMT",
       "acceptedAt": "2026-11-12T04:19:51.002Z"
     },
-    "dfs.ny.gov-industry-guidance-cybersecurity": {
-      "url": "https://www.dfs.ny.gov/industry_guidance/cybersecurity",
+    "dfs.ny.gov-cybersecurity": {
+      "url": "https://www.dfs.ny.gov/cybersecurity",
       "finalUrl": "https://www.dfs.ny.gov/cybersecurity",
       "http": 200,
       "contentType": "text/html; charset=utf-8",
@@ -631,7 +651,7 @@
       "hash": "sha256:f9ed13b0402847176d6955f5663021b5ed5960b77789ba4f54d526866a45be30",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "lastModified": "Wed, 11 Nov 2026 05:51:44 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.002Z"
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "diataxis.fr": {
       "url": "https://diataxis.fr/",
@@ -644,6 +664,18 @@
       "etag": "\"0e56fdef82f323f3318e85ee2352cf10\"",
       "lastModified": "Thu, 06 Aug 2026 07:20:43 GMT",
       "acceptedAt": "2026-11-12T04:19:51.002Z"
+    },
+    "digital.gov-guides-plain-language": {
+      "url": "https://digital.gov/guides/plain-language",
+      "finalUrl": "https://digital.gov/guides/plain-language",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:8976b8eeb5da578e3906b3ff26ee8f9827d73ef8fbcb17c24349dc7ba213bc47",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"91dcca69bf5d256b04caf0e4ea1d5a21\"",
+      "lastModified": "Thu, 12 Nov 2026 04:05:30 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "docs.aws.amazon.com-bedrock-latest-userguide-data-retention": {
       "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html",
@@ -749,8 +781,8 @@
       "lastModified": "Wed, 11 Nov 2026 15:00:39 GMT",
       "acceptedAt": "2026-11-12T04:19:51.003Z"
     },
-    "dora.dev-guides-dora-metrics-four-keys": {
-      "url": "https://dora.dev/guides/dora-metrics-four-keys/",
+    "dora.dev-guides-dora-metrics": {
+      "url": "https://dora.dev/guides/dora-metrics/",
       "finalUrl": "https://dora.dev/guides/dora-metrics/",
       "http": 200,
       "contentType": "text/html; charset=utf-8",
@@ -759,7 +791,7 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "etag": "\"49034d1f77973705b318802457beaf80a45fb31acddafccf68964fcc1c4791a4-br\"",
       "lastModified": "Wed, 11 Nov 2026 15:00:39 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.003Z"
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "dos.ny.gov-biennial-statements-business-corporations-and-limited-liabili": {
       "url": "https://dos.ny.gov/biennial-statements-business-corporations-and-limited-liability-companies",
@@ -2463,30 +2495,6 @@
       "lastModified": "Wed, 11 Nov 2026 14:12:44 GMT",
       "acceptedAt": "2026-11-12T04:19:51.029Z"
     },
-    "gov.uk-guidance-content-design-writing-for-gov-uk": {
-      "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk",
-      "finalUrl": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/tone-of-voice/",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:ab30507d23c1d951f38c46a5c500ed3aa597c73185470092cc1fe28c54b7c167",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "W/\"6af19467-20c\"",
-      "lastModified": "Mon, 09 Nov 2026 09:37:43 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.029Z"
-    },
-    "gov.uk-guidance-style-guide": {
-      "url": "https://www.gov.uk/guidance/style-guide",
-      "finalUrl": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:e567520f25bb9b4b16ee6953557dd76979794c52f3fd465b3872ce16ae96eaa4",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "W/\"6af19467-57b1\"",
-      "lastModified": "Mon, 09 Nov 2026 09:37:43 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.029Z"
-    },
     "gov.uk-service-manual": {
       "url": "https://www.gov.uk/service-manual",
       "finalUrl": "https://www.gov.uk/service-manual",
@@ -2497,6 +2505,30 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "etag": "W/\"6f51fcdab4f5ac9f67cb02bdf73a1a77\"",
       "acceptedAt": "2026-11-12T04:19:51.029Z"
+    },
+    "guidance.publishing.service.gov.uk-writing-to-gov-uk-standards": {
+      "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/",
+      "finalUrl": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:23b0e75b00ecb9d90b8bffba6499f17afebf67ed9d23bda470cf1e40f4deaa9e",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "W/\"6af19467-55f2\"",
+      "lastModified": "Mon, 09 Nov 2026 09:37:43 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
+    "guidance.publishing.service.gov.uk-writing-to-gov-uk-standards-style-gui": {
+      "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+      "finalUrl": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:6d2453d265cd40a0b8d2b7de064e25b20c0ad8334d9367050817b6b03aee4ed9",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "W/\"6af19467-2993e\"",
+      "lastModified": "Mon, 09 Nov 2026 09:37:43 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "gxpready.com-gxp-compliance-guide": {
       "url": "https://gxpready.com/gxp-compliance-guide/",
@@ -2529,6 +2561,16 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.030Z"
     },
+    "healthit.gov-privacy-security-security-risk-assessment-tool": {
+      "url": "https://healthit.gov/privacy-security/security-risk-assessment-tool/",
+      "finalUrl": "https://healthit.gov/privacy-security/security-risk-assessment-tool/",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:1880173c74d12e588332517d8e75ac51479f0edf7c052ecb67bd01a1cdf225bd",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
     "healthit.gov-topic-privacy-security-and-hipaa-security-risk-assessment-t": {
       "url": "https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool",
       "finalUrl": "https://healthit.gov/privacy-security/security-risk-assessment-tool/",
@@ -2538,6 +2580,18 @@
       "hash": "sha256:1880173c74d12e588332517d8e75ac51479f0edf7c052ecb67bd01a1cdf225bd",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.030Z"
+    },
+    "hhscyber.hhs.gov": {
+      "url": "https://hhscyber.hhs.gov/",
+      "finalUrl": "https://hhscyber.hhs.gov/",
+      "http": 200,
+      "contentType": "text/html",
+      "mode": "status",
+      "hash": "sha256:6ef788f215cfb10bfc09047fa20e07171e49557482bbddb3b5998e8d02d347dc",
+      "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "W/\"06a07acfe827cc0956b99e837de5cd31\"",
+      "lastModified": "Thu, 18 Jun 2026 14:40:32 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "ic3.gov": {
       "url": "https://www.ic3.gov/",
@@ -2831,6 +2885,18 @@
       "lastModified": "Tue, 10 Nov 2026 14:20:41 GMT",
       "acceptedAt": "2026-11-12T04:19:51.033Z"
     },
+    "missingkids.org-netsmartz": {
+      "url": "https://www.missingkids.org/netsmartz",
+      "finalUrl": "https://www.missingkids.org/netsmartz/home",
+      "http": 200,
+      "contentType": "text/html;charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:00cc4b08053cfe6b9a394dba54dee67f2d218a1b452aa4fc6708e531f7b2a208",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"ddcb-65f77749f2008-gzip\"",
+      "lastModified": "Wed, 04 Nov 2026 18:22:02 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
     "missingkids.org-sextortion": {
       "url": "https://www.missingkids.org/sextortion",
       "finalUrl": "https://www.missingkids.org/sextortion",
@@ -2885,8 +2951,8 @@
       "lastModified": "Wed, 11 Nov 2026 11:18:23 GMT",
       "acceptedAt": "2026-11-12T04:19:51.034Z"
     },
-    "ncsc.gov.uk-collection-small-business-guide": {
-      "url": "https://www.ncsc.gov.uk/collection/small-business-guide",
+    "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security": {
+      "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
       "finalUrl": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
       "http": 200,
       "contentType": "text/html; charset=UTF-8",
@@ -2894,7 +2960,18 @@
       "hash": "sha256:a494b9522006280171cd35602c1aeff755b5331aa5c11fe969bdb75c1f1867a8",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "lastModified": "Wed, 11 Nov 2026 12:01:00 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.034Z"
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
+    "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security-backi": {
+      "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security/backing-up-your-data",
+      "finalUrl": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security/backing-up-your-data",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:95496c3bf23a2568cfb62a47727f8d873cda067808bbd4579be5f7c179041e02",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Wed, 11 Nov 2026 12:02:20 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "ncsc.gov.uk-guidance-phishing": {
       "url": "https://www.ncsc.gov.uk/guidance/phishing",
@@ -2917,6 +2994,17 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "lastModified": "Wed, 11 Nov 2026 12:02:46 GMT",
       "acceptedAt": "2026-11-12T04:19:51.034Z"
+    },
+    "ncsc.gov.uk-information-top-tips-for-staff": {
+      "url": "https://www.ncsc.gov.uk/information/top-tips-for-staff",
+      "finalUrl": "https://www.ncsc.gov.uk/information/top-tips-for-staff",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:8ca23689001f294faa0080c4ea00dbeeae0b98ddac03ffff31c52b47d58eb74a",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Mon, 09 Nov 2026 13:57:40 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "ncsl.org-technology-and-communication-security-breach-notification-laws": {
       "url": "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws",
@@ -3108,28 +3196,6 @@
       "lastModified": "Thu, 24 Sep 2026 14:12:52 GMT",
       "acceptedAt": "2026-11-12T04:19:51.036Z"
     },
-    "owasp.org-www-community-threat-modeling": {
-      "url": "https://owasp.org/www-community/Threat_Modeling",
-      "finalUrl": "https://community.owasp.org/Threat_Modeling",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:78b5382278c0765e815cc44da7d01193b81eeaf45e8ade3681af3633486fa3cb",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "lastModified": "Tue, 10 Nov 2026 17:29:44 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.036Z"
-    },
-    "owasp.org-www-project-application-security-verification-standard": {
-      "url": "https://owasp.org/www-project-application-security-verification-standard/",
-      "finalUrl": "https://asvs.owasp.org/",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:aa62db01b4d39efb163cc06b03ca0f1e7fe8180227e5bab4f04cde4bffe44b17",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "lastModified": "Mon, 26 Oct 2026 20:42:35 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.036Z"
-    },
     "pages.nist.gov-800-63-4-sp800-63b": {
       "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
       "finalUrl": "https://pages.nist.gov/800-63-4/sp800-63b.html",
@@ -3205,18 +3271,6 @@
       "lastModified": "Wed, 11 Nov 2026 23:11:51 GMT",
       "acceptedAt": "2026-11-12T04:19:51.038Z"
     },
-    "plainlanguage.gov-guidelines": {
-      "url": "https://www.plainlanguage.gov/guidelines/",
-      "finalUrl": "https://digital.gov/guides/plain-language",
-      "http": 200,
-      "contentType": "text/html; charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:8976b8eeb5da578e3906b3ff26ee8f9827d73ef8fbcb17c24349dc7ba213bc47",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "\"91dcca69bf5d256b04caf0e4ea1d5a21\"",
-      "lastModified": "Thu, 12 Nov 2026 04:05:30 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.038Z"
-    },
     "polyhaven.com": {
       "url": "https://polyhaven.com/",
       "finalUrl": "https://polyhaven.com/",
@@ -3227,8 +3281,8 @@
       "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.038Z"
     },
-    "prettier.io-docs-en-rationale": {
-      "url": "https://prettier.io/docs/en/rationale",
+    "prettier.io-docs-rationale": {
+      "url": "https://prettier.io/docs/rationale",
       "finalUrl": "https://prettier.io/docs/rationale",
       "http": 200,
       "contentType": "text/html; charset=UTF-8",
@@ -3236,7 +3290,7 @@
       "hash": "sha256:eb1d5ac81fcdc85c4b700d39efc820570616761a8ead6012f7a0c8231e1170dd",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "etag": "W/\"b2c369c80e5fecf92071e90a2d7bdf8c-ssl\"",
-      "acceptedAt": "2026-11-12T04:19:51.038Z"
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "privacyguides.org": {
       "url": "https://www.privacyguides.org/",
@@ -3468,6 +3522,18 @@
       "lastModified": "Mon, 26 Oct 2026 02:30:00 GMT",
       "acceptedAt": "2026-11-12T04:19:51.041Z"
     },
+    "support.apple.com-102641": {
+      "url": "https://support.apple.com/102641",
+      "finalUrl": "https://support.apple.com/en-us/102641",
+      "http": 200,
+      "contentType": "text/html;charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:6db987e8c9cb85b95cbb0fdc2a60cc12a6d5950adf9747b054985ea46ae30a43",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"0bf3c9705d0929340508b6b8cbfdbf64--gzip\"",
+      "lastModified": "Mon, 26 Oct 2026 02:30:00 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
     "support.apple.com-109345": {
       "url": "https://support.apple.com/109345",
       "finalUrl": "https://support.apple.com/en-us/109345",
@@ -3492,28 +3558,6 @@
       "lastModified": "Mon, 09 Nov 2026 21:16:31 GMT",
       "acceptedAt": "2026-11-12T04:19:51.041Z"
     },
-    "support.apple.com-ht212513": {
-      "url": "https://support.apple.com/ht212513",
-      "finalUrl": "https://support.apple.com/en-us/102641",
-      "http": 200,
-      "contentType": "text/html;charset=utf-8",
-      "mode": "html",
-      "hash": "sha256:6db987e8c9cb85b95cbb0fdc2a60cc12a6d5950adf9747b054985ea46ae30a43",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "etag": "\"0bf3c9705d0929340508b6b8cbfdbf64--gzip\"",
-      "lastModified": "Mon, 26 Oct 2026 02:30:00 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.041Z"
-    },
-    "support.google.com-a-answer-81126": {
-      "url": "https://support.google.com/a/answer/81126",
-      "finalUrl": "https://support.google.com/mail/answer/81126?visit_id=639300538886999479-2137299474&rd=1",
-      "http": 200,
-      "contentType": "text/html; charset=UTF-8",
-      "mode": "html",
-      "hash": "sha256:b26b9301fc51fb35add77ba802c52a3d86132a065ce043bb4801e8f408d51e42",
-      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "acceptedAt": "2026-11-12T04:19:51.042Z"
-    },
     "support.google.com-accounts-answer-11350823": {
       "url": "https://support.google.com/accounts/answer/11350823",
       "finalUrl": "https://support.google.com/accounts/answer/11350823",
@@ -3534,6 +3578,26 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.042Z"
     },
+    "support.google.com-drive-answer-7166529": {
+      "url": "https://support.google.com/drive/answer/7166529",
+      "finalUrl": "https://support.google.com/drive/answer/7166529",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:d13ad0b14a4b8cca2d78aafd6be7a7d1cb0e7a83449be12c217445d46bf52bce",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
+    "support.google.com-mail-answer-81126": {
+      "url": "https://support.google.com/mail/answer/81126",
+      "finalUrl": "https://support.google.com/mail/answer/81126",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:b26b9301fc51fb35add77ba802c52a3d86132a065ce043bb4801e8f408d51e42",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
     "support.google.com-pixelphone-answer-4457705": {
       "url": "https://support.google.com/pixelphone/answer/4457705",
       "finalUrl": "https://support.google.com/pixelphone/answer/4457705",
@@ -3543,6 +3607,16 @@
       "hash": "sha256:8b74b38698fcad0021dbcf3b3626f1e949c86364f8cb6bf0666f5a1e95a83348",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.042Z"
+    },
+    "support.microsoft.com-en-us-onedrive-share-files-and-folders-in-microsof": {
+      "url": "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive",
+      "finalUrl": "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:0540e0ebbdf0a956cea5b1eeeb6ba82fc5d1f780cb4b643654c77ca846c76d80",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "takeitdown.ncmec.org": {
       "url": "https://takeitdown.ncmec.org/",
@@ -3577,8 +3651,19 @@
       "lastModified": "Thu, 28 May 2026 12:20:12 GMT",
       "acceptedAt": "2026-11-12T04:19:51.043Z"
     },
-    "uspis.gov-news-scam-article-smishing": {
-      "url": "https://www.uspis.gov/news/scam-article/smishing",
+    "top10.owasp.org": {
+      "url": "https://top10.owasp.org/",
+      "finalUrl": "https://top10.owasp.org/",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "status",
+      "hash": "sha256:6ef788f215cfb10bfc09047fa20e07171e49557482bbddb3b5998e8d02d347dc",
+      "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Thu, 24 Sep 2026 14:12:52 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
+    "uspis.gov-news-scam-article-smishing-package-tracking-text-scams": {
+      "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams",
       "finalUrl": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams",
       "http": 200,
       "contentType": "text/html; charset=UTF-8",
@@ -3586,8 +3671,8 @@
       "hash": "sha256:9eb1e15bddc26326992bad35f8715c32e4d0467c23b52916e9beac2145e828aa",
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "etag": "\"624ec54be6a9ba3bbffa175db4731f11\"",
-      "lastModified": "Thu, 12 Nov 2026 04:18:14 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.043Z"
+      "lastModified": "Thu, 12 Nov 2026 04:38:02 GMT",
+      "acceptedAt": "2026-11-12T04:40:00.695Z"
     },
     "w3.org-tr-wcag21": {
       "url": "https://www.w3.org/TR/WCAG21/",
