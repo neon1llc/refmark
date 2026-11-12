@@ -65,15 +65,6 @@
       ]
     },
     {
-      "id": "405d.hhs.gov",
-      "url": "https://405d.hhs.gov/",
-      "title": "Health Industry Cybersecurity Practices",
-      "citedIn": [
-        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-days-to-comply.md",
-        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
-      ]
-    },
-    {
       "id": "aarp.org-money-scams-fraud-helpline",
       "url": "https://www.aarp.org/money/scams-fraud/helpline.html",
       "title": "AARP Fraud Watch Network Helpline",
@@ -146,9 +137,9 @@
       ]
     },
     {
-      "id": "aicpa-cima.com-topic-audit-assurance-audit-and-assurance-greater-than-so",
-      "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
-      "title": "SOC 2 overview",
+      "id": "aicpa-cima.com-resources-landing-system-and-organization-controls-soc-su",
+      "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
+      "title": "SOC suite of services",
       "citedIn": [
         "neon1llc/soc-it-2-me/course/01-decide-why.md",
         "neon1llc/soc-it-2-me/course/02-scope.md",
@@ -173,6 +164,16 @@
       "title": "New York Department of State's public inquiry",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/registration.md"
+      ]
+    },
+    {
+      "id": "asvs.owasp.org",
+      "url": "https://asvs.owasp.org/",
+      "title": "Application Security Verification Standard",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/company/sources.md",
+        "neon1llc/neon1-corpus/corpus/standards/security-and-data.md",
+        "neon1llc/ready-secure-go/content/practices/govern-and-build/build-owasp-top10-habits.md"
       ]
     },
     {
@@ -306,12 +307,44 @@
       ]
     },
     {
+      "id": "cisa.gov-audiences-small-and-medium-businesses-secure-your-business-back",
+      "url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/data-and-backups/data-3-2-1-backup.md"
+      ]
+    },
+    {
       "id": "cisa.gov-cross-sector-cybersecurity-performance-goals",
       "url": "https://www.cisa.gov/cross-sector-cybersecurity-performance-goals",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/accounts-and-identity/acct-admin-separation.md",
         "neon1llc/ready-secure-go/content/practices/networks-and-wifi/net-business-remote-access.md",
         "neon1llc/ready-secure-go/content/practices/people-and-culture/ppl-onboarding-offboarding.md"
+      ]
+    },
+    {
+      "id": "cisa.gov-cyber-hygiene-services",
+      "url": "https://www.cisa.gov/cyber-hygiene-services",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/networks-and-wifi/net-business-remote-access.md"
+      ]
+    },
+    {
+      "id": "cisa.gov-cybersecurity-awareness-month",
+      "url": "https://www.cisa.gov/cybersecurity-awareness-month",
+      "title": "CISA Cybersecurity Awareness Month",
+      "citedIn": [
+        "neon1llc/home-is-where-the-smart-is/ATTRIBUTIONS.md",
+        "neon1llc/home-is-where-the-smart-is/handbook/01-household-map.md",
+        "neon1llc/home-is-where-the-smart-is/handbook/02-accounts-and-passwords.md",
+        "neon1llc/home-is-where-the-smart-is/handbook/05-devices-and-updates.md",
+        "neon1llc/phish-out-of-water/ATTRIBUTIONS.md",
+        "neon1llc/phish-out-of-water/exercises/two-step-lab.md",
+        "neon1llc/phish-out-of-water/handouts/one-page-takeaway.md",
+        "neon1llc/phish-out-of-water/handouts/quiz.md",
+        "neon1llc/phish-out-of-water/session/facilitator-script.md",
+        "neon1llc/phish-out-of-water/session/index.md",
+        "neon1llc/phish-out-of-water/session/slides.md"
       ]
     },
     {
@@ -326,13 +359,6 @@
       "url": "https://www.cisa.gov/MFA",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/accounts-and-identity/acct-two-step-login.md"
-      ]
-    },
-    {
-      "id": "cisa.gov-resources-tools-resources-back-business-data",
-      "url": "https://www.cisa.gov/resources-tools/resources/back-business-data",
-      "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/data-and-backups/data-3-2-1-backup.md"
       ]
     },
     {
@@ -357,37 +383,10 @@
       ]
     },
     {
-      "id": "cisa.gov-resources-tools-services-cisa-vulnerability-scanning",
-      "url": "https://www.cisa.gov/resources-tools/services/cisa-vulnerability-scanning",
-      "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/networks-and-wifi/net-business-remote-access.md"
-      ]
-    },
-    {
       "id": "cisa.gov-resources-tools-services-secure-cloud-business-applications-scu",
       "url": "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/govern-and-build/gov-cloud-account-basics.md"
-      ]
-    },
-    {
-      "id": "cisa.gov-secure-our-world",
-      "url": "https://www.cisa.gov/secure-our-world",
-      "title": "CISA Secure Our World",
-      "citedIn": [
-        "neon1llc/home-is-where-the-smart-is/ATTRIBUTIONS.md",
-        "neon1llc/home-is-where-the-smart-is/handbook/01-household-map.md",
-        "neon1llc/home-is-where-the-smart-is/handbook/02-accounts-and-passwords.md",
-        "neon1llc/home-is-where-the-smart-is/handbook/05-devices-and-updates.md",
-        "neon1llc/phish-out-of-water/ATTRIBUTIONS.md",
-        "neon1llc/phish-out-of-water/exercises/two-step-lab.md",
-        "neon1llc/phish-out-of-water/handouts/one-page-takeaway.md",
-        "neon1llc/phish-out-of-water/handouts/quiz.md",
-        "neon1llc/phish-out-of-water/session/facilitator-script.md",
-        "neon1llc/phish-out-of-water/session/index.md",
-        "neon1llc/phish-out-of-water/session/slides.md",
-        "neon1llc/ready-secure-go/content/practices/data-and-backups/data-share-safely.md",
-        "neon1llc/ready-secure-go/content/practices/people-and-culture/ppl-family-tech-talk.md"
       ]
     },
     {
@@ -484,11 +483,20 @@
       ]
     },
     {
-      "id": "commission.europa.eu-strategy-and-policy-policies-justice-and-fundamenta",
-      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+      "id": "commission.europa.eu-strategy-and-policy-policies-justice-and-fundamenta-2",
+      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
       "title": "European Accessibility Act",
       "citedIn": [
         "neon1llc/you-have-20-seconds-to-comply/domains/accessibility/20-minutes-to-ada-and-wcag.md"
+      ]
+    },
+    {
+      "id": "community.owasp.org-threat-modeling",
+      "url": "https://community.owasp.org/Threat_Modeling",
+      "title": "Threat modeling",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/company/sources.md",
+        "neon1llc/neon1-corpus/corpus/standards/security-and-data.md"
       ]
     },
     {
@@ -884,9 +892,9 @@
       ]
     },
     {
-      "id": "dfs.ny.gov-industry-guidance-cybersecurity",
-      "url": "https://www.dfs.ny.gov/industry_guidance/cybersecurity",
-      "title": "Cybersecurity Regulation, 23 NYCRR Part 500",
+      "id": "dfs.ny.gov-cybersecurity",
+      "url": "https://www.dfs.ny.gov/cybersecurity",
+      "title": "Cybersecurity Resource Center, 23 NYCRR Part 500",
       "citedIn": [
         "neon1llc/you-have-20-seconds-to-comply/domains/security/20-minutes-to-nist-csf.md",
         "neon1llc/you-have-20-seconds-to-comply/training/facilitator-guide.md"
@@ -899,6 +907,15 @@
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/standards/documentation.md",
+        "neon1llc/neon1-corpus/corpus/standards/writing.md"
+      ]
+    },
+    {
+      "id": "digital.gov-guides-plain-language",
+      "url": "https://digital.gov/guides/plain-language",
+      "title": "Plain language guide series",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/standards/writing.md"
       ]
     },
@@ -977,9 +994,9 @@
       ]
     },
     {
-      "id": "dora.dev-guides-dora-metrics-four-keys",
-      "url": "https://dora.dev/guides/dora-metrics-four-keys/",
-      "title": "DORA's four key measures",
+      "id": "dora.dev-guides-dora-metrics",
+      "url": "https://dora.dev/guides/dora-metrics/",
+      "title": "DORA's five software delivery performance metrics",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/standards/measurement.md"
       ]
@@ -2672,28 +2689,28 @@
       ]
     },
     {
-      "id": "gov.uk-guidance-content-design-writing-for-gov-uk",
-      "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk",
-      "title": "Writing for GOV.UK",
+      "id": "gov.uk-service-manual",
+      "url": "https://www.gov.uk/service-manual",
+      "title": "GOV.UK Service Manual",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/company/sources.md"
+      ]
+    },
+    {
+      "id": "guidance.publishing.service.gov.uk-writing-to-gov-uk-standards",
+      "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/",
+      "title": "Writing to GOV.UK standards",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/standards/writing.md"
       ]
     },
     {
-      "id": "gov.uk-guidance-style-guide",
-      "url": "https://www.gov.uk/guidance/style-guide",
-      "title": "GOV.UK style guide",
+      "id": "guidance.publishing.service.gov.uk-writing-to-gov-uk-standards-style-gui",
+      "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+      "title": "GOV.UK A to Z style guide",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/standards/writing.md"
-      ]
-    },
-    {
-      "id": "gov.uk-service-manual",
-      "url": "https://www.gov.uk/service-manual",
-      "title": "GOV.UK Service Manual",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/sources.md"
       ]
     },
     {
@@ -2722,11 +2739,19 @@
       ]
     },
     {
+      "id": "healthit.gov-privacy-security-security-risk-assessment-tool",
+      "url": "https://healthit.gov/privacy-security/security-risk-assessment-tool/",
+      "title": "Security Risk Assessment Tool",
+      "citedIn": [
+        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-days-to-comply.md",
+        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
+      ]
+    },
+    {
       "id": "healthit.gov-topic-privacy-security-and-hipaa-security-risk-assessment-t",
       "url": "https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool",
       "title": "Security Risk Assessment Tool",
       "citedIn": [
-        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
       ]
     },
@@ -2802,6 +2827,15 @@
       "url": "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html",
       "title": "Summary of the HIPAA Security Rule",
       "citedIn": [
+        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
+      ]
+    },
+    {
+      "id": "hhscyber.hhs.gov",
+      "url": "https://hhscyber.hhs.gov/",
+      "title": "HHS Cyber Gateway",
+      "citedIn": [
+        "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
       ]
     },
@@ -3063,6 +3097,13 @@
       ]
     },
     {
+      "id": "missingkids.org-netsmartz",
+      "url": "https://www.missingkids.org/netsmartz",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/people-and-culture/ppl-family-tech-talk.md"
+      ]
+    },
+    {
       "id": "missingkids.org-sextortion",
       "url": "https://www.missingkids.org/sextortion",
       "title": "Sextortion",
@@ -3106,13 +3147,20 @@
       ]
     },
     {
-      "id": "ncsc.gov.uk-collection-small-business-guide",
-      "url": "https://www.ncsc.gov.uk/collection/small-business-guide",
-      "title": "Small business guide",
+      "id": "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security",
+      "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
+      "title": "Small organisations guide to cyber security",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/sources.md",
-        "neon1llc/neon1-corpus/corpus/guides/backups-you-can-trust.md",
         "neon1llc/neon1-corpus/corpus/guides/password-manager-for-family.md"
+      ]
+    },
+    {
+      "id": "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security-backi",
+      "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security/backing-up-your-data",
+      "title": "Small organisations guide: backing up your data",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/guides/backups-you-can-trust.md"
       ]
     },
     {
@@ -3130,8 +3178,8 @@
       ]
     },
     {
-      "id": "ncsc.gov.uk-training-top-tips-for-staff-web",
-      "url": "https://www.ncsc.gov.uk/training/top-tips-for-staff-web/",
+      "id": "ncsc.gov.uk-information-top-tips-for-staff",
+      "url": "https://www.ncsc.gov.uk/information/top-tips-for-staff",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/people-and-culture/ppl-security-awareness-that-works.md"
       ]
@@ -3338,25 +3386,6 @@
       ]
     },
     {
-      "id": "owasp.org-www-community-threat-modeling",
-      "url": "https://owasp.org/www-community/Threat_Modeling",
-      "title": "Threat modeling",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/sources.md",
-        "neon1llc/neon1-corpus/corpus/standards/security-and-data.md"
-      ]
-    },
-    {
-      "id": "owasp.org-www-project-application-security-verification-standard",
-      "url": "https://owasp.org/www-project-application-security-verification-standard/",
-      "title": "Application Security Verification Standard",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/sources.md",
-        "neon1llc/neon1-corpus/corpus/standards/security-and-data.md",
-        "neon1llc/ready-secure-go/content/practices/govern-and-build/build-owasp-top10-habits.md"
-      ]
-    },
-    {
       "id": "pages.nist.gov-800-63-4-sp800-63b",
       "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
       "title": "Digital identity guidelines, SP 800-63B",
@@ -3422,15 +3451,6 @@
       ]
     },
     {
-      "id": "plainlanguage.gov-guidelines",
-      "url": "https://www.plainlanguage.gov/guidelines/",
-      "title": "Federal plain language guidelines",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/sources.md",
-        "neon1llc/neon1-corpus/corpus/standards/writing.md"
-      ]
-    },
-    {
       "id": "polyhaven.com",
       "url": "https://polyhaven.com/",
       "citedIn": [
@@ -3438,8 +3458,8 @@
       ]
     },
     {
-      "id": "prettier.io-docs-en-rationale",
-      "url": "https://prettier.io/docs/en/rationale",
+      "id": "prettier.io-docs-rationale",
+      "url": "https://prettier.io/docs/rationale",
       "title": "Prettier rationale",
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/standards/code-style.md"
@@ -3634,6 +3654,14 @@
       ]
     },
     {
+      "id": "support.apple.com-102641",
+      "url": "https://support.apple.com/102641",
+      "title": "recovery contact",
+      "citedIn": [
+        "neon1llc/neon1-corpus/corpus/guides/password-manager-for-family.md"
+      ]
+    },
+    {
       "id": "support.apple.com-109345",
       "url": "https://support.apple.com/109345",
       "title": "recovery key",
@@ -3646,22 +3674,6 @@
       "url": "https://support.apple.com/find-my",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/devices-and-updates/dev-find-and-wipe.md"
-      ]
-    },
-    {
-      "id": "support.apple.com-ht212513",
-      "url": "https://support.apple.com/ht212513",
-      "title": "recovery contact",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/guides/password-manager-for-family.md"
-      ]
-    },
-    {
-      "id": "support.google.com-a-answer-81126",
-      "url": "https://support.google.com/a/answer/81126",
-      "title": "Email sender guidelines",
-      "citedIn": [
-        "neon1llc/you-have-20-seconds-to-comply/domains/marketing/20-minutes-to-can-spam.md"
       ]
     },
     {
@@ -3681,11 +3693,33 @@
       ]
     },
     {
+      "id": "support.google.com-drive-answer-7166529",
+      "url": "https://support.google.com/drive/answer/7166529",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/data-and-backups/data-share-safely.md"
+      ]
+    },
+    {
+      "id": "support.google.com-mail-answer-81126",
+      "url": "https://support.google.com/mail/answer/81126",
+      "title": "Email sender guidelines",
+      "citedIn": [
+        "neon1llc/you-have-20-seconds-to-comply/domains/marketing/20-minutes-to-can-spam.md"
+      ]
+    },
+    {
       "id": "support.google.com-pixelphone-answer-4457705",
       "url": "https://support.google.com/pixelphone/answer/4457705",
       "title": "Pixel update schedule",
       "citedIn": [
         "neon1llc/home-is-where-the-smart-is/handbook/10-buying-and-retiring.md"
+      ]
+    },
+    {
+      "id": "support.microsoft.com-en-us-onedrive-share-files-and-folders-in-microsof",
+      "url": "https://support.microsoft.com/en-us/onedrive/share-files-and-folders-in-microsoft-onedrive",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/data-and-backups/data-share-safely.md"
       ]
     },
     {
@@ -3741,6 +3775,13 @@
       ]
     },
     {
+      "id": "top10.owasp.org",
+      "url": "https://top10.owasp.org/",
+      "citedIn": [
+        "neon1llc/ready-secure-go/content/practices/govern-and-build/build-owasp-top10-habits.md"
+      ]
+    },
+    {
       "id": "upwork.com-pricing-client",
       "url": "https://www.upwork.com/pricing/client",
       "title": "Upwork",
@@ -3749,9 +3790,9 @@
       ]
     },
     {
-      "id": "uspis.gov-news-scam-article-smishing",
-      "url": "https://www.uspis.gov/news/scam-article/smishing",
-      "title": "Smishing",
+      "id": "uspis.gov-news-scam-article-smishing-package-tracking-text-scams",
+      "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams",
+      "title": "Smishing: package tracking text scams",
       "citedIn": [
         "neon1llc/phish-out-of-water/exercises/spot-the-scam.md",
         "neon1llc/phish-out-of-water/guide/scam-texts.md",
