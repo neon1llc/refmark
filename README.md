@@ -137,7 +137,7 @@ Snapshots hold copies of other people's pages, so keep them in the Actions cache
 
 ## What this repository watches
 
-Refmark began as the way [neon1](https://neon1.tech) keeps its published knowledge honest. [`watch/neon1.json`](watch/neon1.json) lists the 421 outside sources, on 133 sites, cited across neon1's knowledge corpus, website, and education repositories, and [the watch workflow](.github/workflows/watch.yml) checks them every week. Each source lists the files that cite it, so a change leads straight to the pages that need another look.
+Refmark began as the way [neon1](https://neon1.tech) keeps its published knowledge honest. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories, and [the watch workflow](.github/workflows/watch.yml) checks them every week. Each source lists the files that cite it, so a change leads straight to the pages that need another look.
 
 The list is rebuilt from fresh clones of those repositories:
 
@@ -145,9 +145,11 @@ The list is rebuilt from fresh clones of those repositories:
 refmark scan --manifest watch/neon1.json --prune \
   ../neon1-corpus ../neon1-site ../soc-it-2-me ../phish-out-of-water \
   ../home-is-where-the-smart-is ../ready-secure-go ../you-have-20-seconds-to-comply \
+  ../there-are-no-incidents \
   --as neon1llc/neon1-corpus --as neon1llc/neon1-site --as neon1llc/soc-it-2-me \
   --as neon1llc/phish-out-of-water --as neon1llc/home-is-where-the-smart-is \
-  --as neon1llc/ready-secure-go --as neon1llc/you-have-20-seconds-to-comply
+  --as neon1llc/ready-secure-go --as neon1llc/you-have-20-seconds-to-comply \
+  --as neon1llc/there-are-no-incidents
 ```
 
 ## Related tools

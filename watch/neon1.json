@@ -93,6 +93,7 @@
       "url": "https://ag.ny.gov/resources/organizations/data-breach-reporting",
       "title": "Data breach reporting",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
       ]
@@ -362,6 +363,16 @@
       ]
     },
     {
+      "id": "cisa.gov-report",
+      "url": "https://www.cisa.gov/report",
+      "title": "Report a cyber incident",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/ransomware.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md"
+      ]
+    },
+    {
       "id": "cisa.gov-resources-tools-resources-cyber-essentials",
       "url": "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
       "title": "Cyber Essentials",
@@ -379,14 +390,28 @@
         "neon1llc/soc-it-2-me/ATTRIBUTIONS.md",
         "neon1llc/soc-it-2-me/course/07-operate.md",
         "neon1llc/soc-it-2-me/evidence/incidents.md",
-        "neon1llc/soc-it-2-me/workshop/facilitator-guide.md"
+        "neon1llc/soc-it-2-me/workshop/facilitator-guide.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/reference/glossary.md",
+        "neon1llc/there-are-no-incidents/tabletops/01-the-wire-that-wasnt.md",
+        "neon1llc/there-are-no-incidents/tabletops/02-monday-morning-ransom.md",
+        "neon1llc/there-are-no-incidents/tabletops/03-left-in-the-cab.md",
+        "neon1llc/there-are-no-incidents/tabletops/04-the-forwarding-rule.md",
+        "neon1llc/there-are-no-incidents/tabletops/05-our-vendor-got-hacked.md",
+        "neon1llc/there-are-no-incidents/tabletops/06-reply-all.md",
+        "neon1llc/there-are-no-incidents/tabletops/facilitator-guide.md",
+        "neon1llc/there-are-no-incidents/tabletops/index.md",
+        "neon1llc/there-are-no-incidents/templates/tabletop-record.md"
       ]
     },
     {
       "id": "cisa.gov-resources-tools-services-secure-cloud-business-applications-scu",
       "url": "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
       "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/govern-and-build/gov-cloud-account-basics.md"
+        "neon1llc/ready-secure-go/content/practices/govern-and-build/gov-cloud-account-basics.md",
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md",
+        "neon1llc/there-are-no-incidents/runbook/investigate.md",
+        "neon1llc/there-are-no-incidents/tabletops/04-the-forwarding-rule.md"
       ]
     },
     {
@@ -407,14 +432,21 @@
       "id": "cisa.gov-sites-default-files-publications-fact-sheet-implementing-phishi",
       "url": "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf",
       "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/accounts-and-identity/acct-two-step-login.md"
+        "neon1llc/ready-secure-go/content/practices/accounts-and-identity/acct-two-step-login.md",
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md",
+        "neon1llc/there-are-no-incidents/tabletops/04-the-forwarding-rule.md"
       ]
     },
     {
       "id": "cisa.gov-sites-default-files-publications-incident-response-plan-basics",
       "url": "https://www.cisa.gov/sites/default/files/publications/Incident-Response-Plan-Basics_508c.pdf",
       "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/respond-and-recover/resp-incident-contact-sheet.md"
+        "neon1llc/ready-secure-go/content/practices/respond-and-recover/resp-incident-contact-sheet.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
+        "neon1llc/there-are-no-incidents/runbook/index.md",
+        "neon1llc/there-are-no-incidents/templates/contact-sheet.md",
+        "neon1llc/there-are-no-incidents/templates/response-plan.md"
       ]
     },
     {
@@ -424,7 +456,14 @@
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/guides/backups-you-can-trust.md",
-        "neon1llc/neon1-corpus/corpus/standards/reliability-and-recovery.md"
+        "neon1llc/neon1-corpus/corpus/standards/reliability-and-recovery.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/playbooks/ransomware.md",
+        "neon1llc/there-are-no-incidents/runbook/contain.md",
+        "neon1llc/there-are-no-incidents/runbook/first-hour.md",
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
+        "neon1llc/there-are-no-incidents/runbook/recover.md",
+        "neon1llc/there-are-no-incidents/tabletops/02-monday-morning-ransom.md"
       ]
     },
     {
@@ -557,7 +596,8 @@
       "id": "consumer.ftc.gov-articles-how-protect-your-phone-and-data-it",
       "url": "https://consumer.ftc.gov/articles/how-protect-your-phone-and-data-it",
       "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/devices-and-updates/dev-retire-old-devices.md"
+        "neon1llc/ready-secure-go/content/practices/devices-and-updates/dev-retire-old-devices.md",
+        "neon1llc/there-are-no-incidents/playbooks/lost-or-stolen-device.md"
       ]
     },
     {
@@ -742,6 +782,7 @@
         "neon1llc/phish-out-of-water/CONTRIBUTING.md",
         "neon1llc/ready-secure-go/VCS-ETIQUETTE.md",
         "neon1llc/soc-it-2-me/CONTRIBUTING.md",
+        "neon1llc/there-are-no-incidents/CONTRIBUTING.md",
         "neon1llc/you-have-20-seconds-to-comply/CONTRIBUTING.md"
       ]
     },
@@ -818,7 +859,8 @@
       "citedIn": [
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/guides/backups-you-can-trust.md",
-        "neon1llc/neon1-corpus/corpus/standards/reliability-and-recovery.md"
+        "neon1llc/neon1-corpus/corpus/standards/reliability-and-recovery.md",
+        "neon1llc/there-are-no-incidents/runbook/recover.md"
       ]
     },
     {
@@ -839,7 +881,32 @@
         "neon1llc/soc-it-2-me/ATTRIBUTIONS.md",
         "neon1llc/soc-it-2-me/course/07-operate.md",
         "neon1llc/soc-it-2-me/evidence/incidents.md",
-        "neon1llc/soc-it-2-me/templates/incident-report.md"
+        "neon1llc/soc-it-2-me/templates/incident-report.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/reference/glossary.md",
+        "neon1llc/there-are-no-incidents/runbook/contain.md",
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
+        "neon1llc/there-are-no-incidents/runbook/index.md",
+        "neon1llc/there-are-no-incidents/runbook/investigate.md",
+        "neon1llc/there-are-no-incidents/runbook/is-this-an-incident.md",
+        "neon1llc/there-are-no-incidents/runbook/learn.md",
+        "neon1llc/there-are-no-incidents/runbook/recover.md",
+        "neon1llc/there-are-no-incidents/templates/after-action-report.md",
+        "neon1llc/there-are-no-incidents/templates/incident-log.md",
+        "neon1llc/there-are-no-incidents/templates/response-plan.md"
+      ]
+    },
+    {
+      "id": "csrc.nist.gov-pubs-sp-800-84-final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/84/final",
+      "title": "NIST SP 800-84",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/reference/glossary.md",
+        "neon1llc/there-are-no-incidents/tabletops/facilitator-guide.md",
+        "neon1llc/there-are-no-incidents/tabletops/index.md",
+        "neon1llc/there-are-no-incidents/templates/after-action-report.md",
+        "neon1llc/there-are-no-incidents/templates/tabletop-record.md"
       ]
     },
     {
@@ -896,6 +963,8 @@
       "url": "https://www.dfs.ny.gov/cybersecurity",
       "title": "Cybersecurity Resource Center, 23 NYCRR Part 500",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/ransomware.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/security/20-minutes-to-nist-csf.md",
         "neon1llc/you-have-20-seconds-to-comply/training/facilitator-guide.md"
       ]
@@ -1062,6 +1131,7 @@
       "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314",
       "title": "16 CFR Part 314",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-minutes-to-ftc-safeguards.md"
       ]
     },
@@ -1071,6 +1141,14 @@
       "title": "16 CFR Part 316",
       "citedIn": [
         "neon1llc/you-have-20-seconds-to-comply/domains/marketing/20-minutes-to-can-spam.md"
+      ]
+    },
+    {
+      "id": "ecfr.gov-current-title-16-chapter-i-subchapter-c-part-318",
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-318",
+      "title": "FTC Health Breach Notification Rule, 16 CFR 318",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md"
       ]
     },
     {
@@ -1118,6 +1196,10 @@
       "url": "https://www.ecfr.gov/current/title-16/section-314.2",
       "title": "§ 314.2",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/lost-or-stolen-device.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/contain.md",
+        "neon1llc/there-are-no-incidents/tabletops/03-left-in-the-cab.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-minutes-to-ftc-safeguards.md"
       ]
     },
@@ -1126,6 +1208,14 @@
       "url": "https://www.ecfr.gov/current/title-16/section-314.4",
       "title": "§ 314.4",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/vendor-breach.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
+        "neon1llc/there-are-no-incidents/runbook/learn.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md",
+        "neon1llc/there-are-no-incidents/tabletops/05-our-vendor-got-hacked.md",
+        "neon1llc/there-are-no-incidents/templates/incident-log.md",
+        "neon1llc/there-are-no-incidents/templates/response-plan.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-minutes-to-ftc-safeguards.md"
       ]
     },
@@ -1151,6 +1241,15 @@
       "title": "§ 316.5",
       "citedIn": [
         "neon1llc/you-have-20-seconds-to-comply/domains/marketing/20-minutes-to-can-spam.md"
+      ]
+    },
+    {
+      "id": "ecfr.gov-current-title-17-section-248.30",
+      "url": "https://www.ecfr.gov/current/title-17/section-248.30",
+      "title": "17 CFR 248.30",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/vendor-breach.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md"
       ]
     },
     {
@@ -1327,6 +1426,7 @@
       "url": "https://www.ecfr.gov/current/title-45/section-164.308",
       "title": "§ 164.308(a)(5)",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
       ]
     },
@@ -1393,6 +1493,9 @@
       "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D",
       "title": "§§ 164.400 to 164.414",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/vendor-breach.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/contain.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
       ]
     },
@@ -1447,7 +1550,12 @@
         "neon1llc/phish-out-of-water/exercises/spot-the-scam.md",
         "neon1llc/phish-out-of-water/guide/boss-gift-cards.md",
         "neon1llc/phish-out-of-water/guide/payment-change.md",
-        "neon1llc/phish-out-of-water/session/slides.md"
+        "neon1llc/phish-out-of-water/session/slides.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/playbooks/business-email-compromise.md",
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md",
+        "neon1llc/there-are-no-incidents/runbook/first-hour.md",
+        "neon1llc/there-are-no-incidents/tabletops/01-the-wire-that-wasnt.md"
       ]
     },
     {
@@ -1775,6 +1883,14 @@
       "title": "Data Breach Response: A Guide for Business",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/respond-and-recover/resp-incident-contact-sheet.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/runbook/contain.md",
+        "neon1llc/there-are-no-incidents/runbook/first-hour.md",
+        "neon1llc/there-are-no-incidents/runbook/investigate.md",
+        "neon1llc/there-are-no-incidents/runbook/is-this-an-incident.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md",
+        "neon1llc/there-are-no-incidents/tabletops/06-reply-all.md",
+        "neon1llc/there-are-no-incidents/templates/notification-worksheet.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
       ]
@@ -1784,6 +1900,7 @@
       "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
       "title": "FTC Safeguards Rule: What Your Business Needs to Know",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-minutes-to-ftc-safeguards.md"
       ]
@@ -1794,6 +1911,7 @@
       "title": "Protecting Personal Information: A Guide for Business",
       "citedIn": [
         "neon1llc/ready-secure-go/content/practices/devices-and-updates/dev-screen-lock-and-encryption.md",
+        "neon1llc/there-are-no-incidents/playbooks/misdirected-data.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
       ]
@@ -1811,7 +1929,8 @@
       "id": "ftc.gov-business-guidance-small-businesses-cybersecurity-business-email",
       "url": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity/business-email-imposters",
       "citedIn": [
-        "neon1llc/ready-secure-go/content/practices/scams-and-social-engineering/scam-payment-change-verification.md"
+        "neon1llc/ready-secure-go/content/practices/scams-and-social-engineering/scam-payment-change-verification.md",
+        "neon1llc/there-are-no-incidents/playbooks/business-email-compromise.md"
       ]
     },
     {
@@ -2768,6 +2887,10 @@
       "url": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html",
       "title": "Breach Notification Rule",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/playbooks/lost-or-stolen-device.md",
+        "neon1llc/there-are-no-incidents/playbooks/misdirected-data.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/healthcare/20-minutes-to-hipaa.md"
       ]
@@ -2848,7 +2971,14 @@
         "neon1llc/phish-out-of-water/guide/payment-change.md",
         "neon1llc/phish-out-of-water/guide/romance-investment.md",
         "neon1llc/phish-out-of-water/handouts/who-to-call.md",
-        "neon1llc/ready-secure-go/content/practices/scams-and-social-engineering/scam-pause-and-verify.md"
+        "neon1llc/ready-secure-go/content/practices/scams-and-social-engineering/scam-pause-and-verify.md",
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/playbooks/business-email-compromise.md",
+        "neon1llc/there-are-no-incidents/playbooks/ransomware.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/first-hour.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md",
+        "neon1llc/there-are-no-incidents/tabletops/01-the-wire-that-wasnt.md"
       ]
     },
     {
@@ -2875,7 +3005,8 @@
       "citedIn": [
         "neon1llc/phish-out-of-water/guide/government-impostor.md",
         "neon1llc/phish-out-of-water/guide/job-scams.md",
-        "neon1llc/phish-out-of-water/handouts/who-to-call.md"
+        "neon1llc/phish-out-of-water/handouts/who-to-call.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md"
       ]
     },
     {
@@ -2887,10 +3018,31 @@
       ]
     },
     {
+      "id": "irs.gov-businesses-small-businesses-self-employed-stakeholder-liaison-co",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/stakeholder-liaison-contacts",
+      "title": "IRS Stakeholder Liaison",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md"
+      ]
+    },
+    {
+      "id": "irs.gov-individuals-data-theft-information-for-tax-professionals",
+      "url": "https://www.irs.gov/individuals/data-theft-information-for-tax-professionals",
+      "title": "data theft information for tax professionals",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/templates/contact-sheet.md"
+      ]
+    },
+    {
       "id": "irs.gov-pub-irs-pdf-p4557",
       "url": "https://www.irs.gov/pub/irs-pdf/p4557.pdf",
       "title": "Publication 4557, Safeguarding Taxpayer Data",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-days-to-comply.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/financial-services/20-minutes-to-ftc-safeguards.md"
       ]
@@ -2969,6 +3121,14 @@
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/standards/documentation.md",
         "neon1llc/neon1-corpus/corpus/standards/versioning.md"
+      ]
+    },
+    {
+      "id": "knowledge.workspace.google.com-admin-support-troubleshooting-identify-an",
+      "url": "https://knowledge.workspace.google.com/admin/support/troubleshooting/identify-and-secure-compromised-accounts",
+      "title": "Identify and secure compromised accounts",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md"
       ]
     },
     {
@@ -3062,6 +3222,22 @@
       ]
     },
     {
+      "id": "learn.microsoft.com-en-us-defender-office-365-responding-to-a-compromise",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account",
+      "title": "Responding to a compromised email account",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md"
+      ]
+    },
+    {
+      "id": "learn.microsoft.com-en-us-security-compass-incident-response-playbook-ap",
+      "url": "https://learn.microsoft.com/en-us/security/compass/incident-response-playbook-app-consent",
+      "title": "App consent grant investigation",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/compromised-account.md"
+      ]
+    },
+    {
       "id": "leg.colorado.gov-bills-sb26-189",
       "url": "https://leg.colorado.gov/bills/sb26-189",
       "title": "SB 26-189",
@@ -3147,6 +3323,14 @@
       ]
     },
     {
+      "id": "ncsc.gov.uk-collection-small-business-guidance-response-and-recovery-ste",
+      "url": "https://www.ncsc.gov.uk/collection/small-business-guidance--response-and-recovery/step-1-prepare-for-incidents",
+      "title": "Small Business Guide: Response and Recovery",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/runbook/get-ready.md"
+      ]
+    },
+    {
       "id": "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security",
       "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
       "title": "Small organisations guide to cyber security",
@@ -3185,10 +3369,22 @@
       ]
     },
     {
+      "id": "ncsc.gov.uk-section-exercise-in-a-box-overview",
+      "url": "https://www.ncsc.gov.uk/section/exercise-in-a-box/overview",
+      "title": "Exercise in a Box",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/tabletops/index.md"
+      ]
+    },
+    {
       "id": "ncsl.org-technology-and-communication-security-breach-notification-laws",
       "url": "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws",
       "title": "Security Breach Notification Laws",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/is-this-an-incident.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md",
+        "neon1llc/there-are-no-incidents/templates/notification-worksheet.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
       ]
     },
@@ -3204,6 +3400,7 @@
         "neon1llc/soc-it-2-me/ATTRIBUTIONS.md",
         "neon1llc/soc-it-2-me/course/03-risk.md",
         "neon1llc/soc-it-2-me/evidence/governance.md",
+        "neon1llc/there-are-no-incidents/runbook/index.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/security/20-minutes-to-nist-csf.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/security/README.md"
       ]
@@ -3338,6 +3535,16 @@
       "url": "https://www.nysenate.gov/legislation/laws/GBS/899-AA",
       "title": "§ 899-aa",
       "citedIn": [
+        "neon1llc/there-are-no-incidents/ATTRIBUTIONS.md",
+        "neon1llc/there-are-no-incidents/playbooks/lost-or-stolen-device.md",
+        "neon1llc/there-are-no-incidents/playbooks/misdirected-data.md",
+        "neon1llc/there-are-no-incidents/playbooks/vendor-breach.md",
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md",
+        "neon1llc/there-are-no-incidents/runbook/notify.md",
+        "neon1llc/there-are-no-incidents/tabletops/03-left-in-the-cab.md",
+        "neon1llc/there-are-no-incidents/tabletops/05-our-vendor-got-hacked.md",
+        "neon1llc/there-are-no-incidents/tabletops/06-reply-all.md",
+        "neon1llc/there-are-no-incidents/templates/notification-worksheet.md",
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
       ]
     },
@@ -3356,6 +3563,15 @@
       "title": "California Consumer Privacy Act",
       "citedIn": [
         "neon1llc/you-have-20-seconds-to-comply/domains/privacy/20-minutes-to-state-privacy-laws.md"
+      ]
+    },
+    {
+      "id": "ofac.treasury.gov-media-912981-download",
+      "url": "https://ofac.treasury.gov/media/912981/download",
+      "title": "Updated advisory on potential sanctions risks for facilitating ransomware payments",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/playbooks/ransomware.md",
+        "neon1llc/there-are-no-incidents/tabletops/02-monday-morning-ransom.md"
       ]
     },
     {
@@ -3755,6 +3971,14 @@
         "neon1llc/home-is-where-the-smart-is/handbook/12-when-something-goes-wrong.md",
         "neon1llc/phish-out-of-water/audiences/students.md",
         "neon1llc/ready-secure-go/content/practices/people-and-culture/ppl-family-tech-talk.md"
+      ]
+    },
+    {
+      "id": "taxadmin.org-report-a-data-breach",
+      "url": "https://taxadmin.org/report-a-data-breach/",
+      "title": "Report a Data Breach",
+      "citedIn": [
+        "neon1llc/there-are-no-incidents/reference/notification-rules.md"
       ]
     },
     {

@@ -326,6 +326,16 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:50.998Z"
     },
+    "cisa.gov-report": {
+      "url": "https://www.cisa.gov/report",
+      "finalUrl": "https://myservices.cisa.gov/irf",
+      "http": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:47d2a515ef2f05b87d688656286a61e4f743da4b878684c7654969db17711c40",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "cisa.gov-resources-tools-resources-cyber-essentials": {
       "url": "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
       "finalUrl": "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
@@ -610,6 +620,16 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.001Z"
     },
+    "csrc.nist.gov-pubs-sp-800-84-final": {
+      "url": "https://csrc.nist.gov/pubs/sp/800/84/final",
+      "finalUrl": "https://csrc.nist.gov/pubs/sp/800/84/final",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:b544f0a29ef6df62f45bf11b0dc8076d263ca8c77c90ffe72fee9928ac77957f",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "csrc.nist.gov-pubs-sp-800-88-r1-final": {
       "url": "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
       "finalUrl": "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
@@ -887,6 +907,16 @@
       "scopeKey": "{\"fetch\":\"https://www.ecfr.gov/api/versioner/v1/versions/title-16.json?part=316\",\"mode\":\"json\",\"scope\":{\"pointer\":\"/content_versions\"},\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.005Z"
     },
+    "ecfr.gov-current-title-16-chapter-i-subchapter-c-part-318": {
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-318",
+      "finalUrl": "https://www.ecfr.gov/api/versioner/v1/versions/title-16.json?part=318",
+      "http": 200,
+      "contentType": "application/json; charset=utf-8",
+      "mode": "json",
+      "hash": "sha256:dc56c39b0a9e0335d14d3941bef665c4b975aa5c5610beb4cfde8b1e9068e6db",
+      "scopeKey": "{\"fetch\":\"https://www.ecfr.gov/api/versioner/v1/versions/title-16.json?part=318\",\"mode\":\"json\",\"scope\":{\"pointer\":\"/content_versions\"},\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "ecfr.gov-current-title-16-chapter-i-subchapter-d-part-465": {
       "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-465",
       "finalUrl": "https://www.ecfr.gov/api/versioner/v1/versions/title-16.json?part=465",
@@ -986,6 +1016,16 @@
       "hash": "sha256:93038a740052b934e75a6dab3d03086ae4905d6903d46fc2ac18a7778c6c195d",
       "scopeKey": "{\"fetch\":\"https://www.ecfr.gov/api/versioner/v1/versions/title-16.json?section=316.5\",\"mode\":\"json\",\"scope\":{\"pointer\":\"/content_versions\"},\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.006Z"
+    },
+    "ecfr.gov-current-title-17-section-248.30": {
+      "url": "https://www.ecfr.gov/current/title-17/section-248.30",
+      "finalUrl": "https://www.ecfr.gov/api/versioner/v1/versions/title-17.json?section=248.30",
+      "http": 200,
+      "contentType": "application/json; charset=utf-8",
+      "mode": "json",
+      "hash": "sha256:3d22cfc6e3b6b274871853ad65f3a1983c7d93d4c71248b8c0af4a266e77a934",
+      "scopeKey": "{\"fetch\":\"https://www.ecfr.gov/api/versioner/v1/versions/title-17.json?section=248.30\",\"mode\":\"json\",\"scope\":{\"pointer\":\"/content_versions\"},\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
     },
     "ecfr.gov-current-title-21-chapter-i-subchapter-a-part-11": {
       "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11",
@@ -2648,6 +2688,30 @@
       "lastModified": "Fri, 14 Jun 2024 01:33:32 GMT",
       "acceptedAt": "2026-11-12T04:19:51.031Z"
     },
+    "irs.gov-businesses-small-businesses-self-employed-stakeholder-liaison-co": {
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/stakeholder-liaison-contacts",
+      "finalUrl": "https://www.irs.gov/businesses/small-businesses-self-employed/stakeholder-liaison-contacts",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:0b9660a4851bcfb0d0569e0c815c67a45a9c79743d54f1730908280ea11c43e3",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"1794459703-gzip\"",
+      "lastModified": "Thu, 12 Nov 2026 05:01:43 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
+    "irs.gov-individuals-data-theft-information-for-tax-professionals": {
+      "url": "https://www.irs.gov/individuals/data-theft-information-for-tax-professionals",
+      "finalUrl": "https://www.irs.gov/individuals/data-theft-information-for-tax-professionals",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:bbc13a47362f24dcf2dff68d62d97426f7d83a2db45e0ced279572002b64d978",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"1794459697-gzip\"",
+      "lastModified": "Thu, 12 Nov 2026 05:01:37 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "irs.gov-pub-irs-pdf-p4557": {
       "url": "https://www.irs.gov/pub/irs-pdf/p4557.pdf",
       "finalUrl": "https://www.irs.gov/pub/irs-pdf/p4557.pdf",
@@ -2723,6 +2787,17 @@
       "etag": "W/\"6a51ac1e-66e5\"",
       "lastModified": "Sat, 11 Jul 2026 02:36:14 GMT",
       "acceptedAt": "2026-11-12T04:19:51.031Z"
+    },
+    "knowledge.workspace.google.com-admin-support-troubleshooting-identify-an": {
+      "url": "https://knowledge.workspace.google.com/admin/support/troubleshooting/identify-and-secure-compromised-accounts",
+      "finalUrl": "https://knowledge.workspace.google.com/admin/support/troubleshooting/identify-and-secure-compromised-accounts",
+      "http": 200,
+      "contentType": "text/html; charset=utf-8",
+      "mode": "html",
+      "hash": "sha256:eb81973aa3218a3a1486842ba42ec870dabd5c8a3e6539abe4f0f2123fc26d8a",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Mon, 26 Oct 2026 17:58:28 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
     },
     "law.cornell.edu-uscode-text-15-45": {
       "url": "https://www.law.cornell.edu/uscode/text/15/45",
@@ -2852,6 +2927,30 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "acceptedAt": "2026-11-12T04:19:51.033Z"
     },
+    "learn.microsoft.com-en-us-defender-office-365-responding-to-a-compromise": {
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account",
+      "finalUrl": "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account",
+      "http": 200,
+      "contentType": "text/html",
+      "mode": "html",
+      "hash": "sha256:f49a9549fbf2ba4001ce411fdac8b4239f973c245f7fd07b0f9532bbb874295d",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"8PhQw+x6TVLYqJxq2zttZcMxwPs=\"",
+      "lastModified": "Thu, 29 Oct 2026 17:36:59 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
+    "learn.microsoft.com-en-us-security-compass-incident-response-playbook-ap": {
+      "url": "https://learn.microsoft.com/en-us/security/compass/incident-response-playbook-app-consent",
+      "finalUrl": "https://learn.microsoft.com/en-us/security/zero-trust/security-operations-playbook-app-consent",
+      "http": 200,
+      "contentType": "text/html",
+      "mode": "html",
+      "hash": "sha256:bc1e8567a391f4f93fa9c32e3a719562fc7712d1e090d994ae1f9219868e24fc",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "etag": "\"my7QstNlna2Vr/QHmjSKFD91kw8=\"",
+      "lastModified": "Tue, 03 Nov 2026 18:34:47 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "leg.colorado.gov-bills-sb26-189": {
       "url": "https://leg.colorado.gov/bills/sb26-189",
       "finalUrl": "https://leg.colorado.gov/bills/sb26-189",
@@ -2951,6 +3050,17 @@
       "lastModified": "Wed, 11 Nov 2026 11:18:23 GMT",
       "acceptedAt": "2026-11-12T04:19:51.034Z"
     },
+    "ncsc.gov.uk-collection-small-business-guidance-response-and-recovery-ste": {
+      "url": "https://www.ncsc.gov.uk/collection/small-business-guidance--response-and-recovery/step-1-prepare-for-incidents",
+      "finalUrl": "https://www.ncsc.gov.uk/collection/small-business-guidance--response-and-recovery/step-1-prepare-for-incidents",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:5c0ce0e5df729e415899181660291ae297b61b17deb09ebcbc461d0b0116dbc2",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Wed, 11 Nov 2026 12:10:40 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
+    },
     "ncsc.gov.uk-collection-small-organisations-guide-to-cyber-security": {
       "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
       "finalUrl": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security",
@@ -3005,6 +3115,17 @@
       "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "lastModified": "Mon, 09 Nov 2026 13:57:40 GMT",
       "acceptedAt": "2026-11-12T04:40:00.695Z"
+    },
+    "ncsc.gov.uk-section-exercise-in-a-box-overview": {
+      "url": "https://www.ncsc.gov.uk/section/exercise-in-a-box/overview",
+      "finalUrl": "https://www.ncsc.gov.uk/section/exercise-in-a-box/overview",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:8b77ce9e068e0e19107f49ccf9f3ab712376c5920759db6a933ac62a9fe18025",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Mon, 09 Nov 2026 13:58:16 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
     },
     "ncsl.org-technology-and-communication-security-breach-notification-laws": {
       "url": "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws",
@@ -3162,6 +3283,17 @@
       "etag": "\"1794456962-0\"",
       "lastModified": "Thu, 12 Nov 2026 04:16:02 GMT",
       "acceptedAt": "2026-11-12T04:19:51.036Z"
+    },
+    "ofac.treasury.gov-media-912981-download": {
+      "url": "https://ofac.treasury.gov/media/912981/download",
+      "finalUrl": "https://ofac.treasury.gov/media/912981/download",
+      "http": 200,
+      "contentType": "application/pdf",
+      "mode": "bytes",
+      "hash": "sha256:38b1d622c73a74a59ca1713cbc5d8ac6552d64b0c9885745b83e259a575e1868",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "lastModified": "Wed, 22 Mar 2023 16:04:39 GMT",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
     },
     "ovc.ojp.gov-program-elder-fraud-abuse-national-elder-fraud-hotline": {
       "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline",
@@ -3628,6 +3760,16 @@
       "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
       "lastModified": "Thu, 12 Nov 2026 04:11:17 GMT",
       "acceptedAt": "2026-11-12T04:19:51.042Z"
+    },
+    "taxadmin.org-report-a-data-breach": {
+      "url": "https://taxadmin.org/report-a-data-breach/",
+      "finalUrl": "https://taxadmin.org/report-a-data-breach/",
+      "http": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "mode": "html",
+      "hash": "sha256:370d1ef6f68642167cdc6a9dbd1ed8a3c65115d1805f8de3eea57bb9aed0f207",
+      "scopeKey": "{\"fetch\":null,\"mode\":null,\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
+      "acceptedAt": "2026-11-12T05:14:11.382Z"
     },
     "telemarketing.donotcall.gov": {
       "url": "https://telemarketing.donotcall.gov/",
