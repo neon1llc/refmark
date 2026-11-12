@@ -2,7 +2,7 @@
 
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
-## Unreleased
+## v0.1.0 - 2026-11-12
 
 ### Added
 - `refmark check`: fetches each source, scopes and normalizes it, and compares its SHA-256 fingerprint with the lockfile. Reports changed, broken, unreachable, moved, lost-scope, and new sources, with a line diff and a minor, moderate, or major rating when a snapshot is available.
