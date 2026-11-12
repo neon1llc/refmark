@@ -2,6 +2,11 @@
 
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
+## Unreleased
+
+### Changed
+- The neon1 watch list adds the 13 new sources cited by There Are No Incidents, neon1's incident response training, for 440 sources on 143 sites.
+
 ## v0.1.0 - 2026-11-12
 
 ### Added
