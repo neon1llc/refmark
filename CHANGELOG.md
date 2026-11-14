@@ -2,6 +2,13 @@
 
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
+## v0.1.2 - 2026-11-14
+
+### Changed
+- The README and package description now say that Refmark is editorial support: it flags cited sources that changed so a person can review them, and it does not check or guarantee that a document is accurate.
+- The README describes the weekly watch as what the workflow is set to do, not as a record of past runs.
+- `package.json` now reports the released version. It still said 0.1.0 after v0.1.1.
+
 ## v0.1.1 - 2026-11-12
 
 ### Changed
