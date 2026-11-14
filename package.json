@@ -1,6 +1,6 @@
 {
   "name": "refmark",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Flags the sources your documents cite when they change, so a person can review them.",
   "type": "module",
   "bin": {
