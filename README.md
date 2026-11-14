@@ -1,8 +1,8 @@
 # Refmark
 
-Watch the sources your documents cite and find out when they change.
+Flags the sources your documents cite when they change, so a person can review them.
 
-Guides, training material, policies, and knowledge bases lean on outside sources: standards, regulations, agency guidance, and vendor documentation. Those pages are revised, reorganized, and retired without notice, and a document that cited them correctly last year can be wrong today. Refmark records a fingerprint of the part of each source you rely on, checks it on a schedule, and reports what changed, what broke, and what moved, with a diff of the changed text. A weekly check might report:
+Guides, training material, policies, and knowledge bases lean on outside sources: standards, regulations, agency guidance, and vendor documentation. Those pages are revised, reorganized, and retired without notice, and a document that cited them correctly last year may need another look today. Refmark records a fingerprint of the part of each source you rely on, checks it when you run it or on a schedule you set, and reports what changed, what broke, and what moved, with a diff of the changed text. A check might report:
 
 ```text
 $ refmark check
@@ -14,6 +14,8 @@ broken (1)
     HTTP 404
 421 sources checked: 1 changed, 1 broken, 419 unchanged
 ```
+
+Refmark is editorial support. It tells you that a cited source changed, so a person can read the change and decide whether the document needs updating. It does not judge whether a document is accurate, and it cannot promise that a document stays accurate: it only sees the sources you list, only the parts you scope, and only the text a server sends.
 
 ## How it works
 
@@ -98,7 +100,7 @@ The first source has no scope, so its `#levels` fragment selects that section of
 
 ## In GitHub Actions
 
-Refmark ships as an action. This workflow checks sources every Monday and opens an issue when something needs review:
+Refmark ships as an action. This workflow is set to check sources every Monday and to open an issue when something needs review:
 
 ```yaml
 name: sources
@@ -137,7 +139,7 @@ Snapshots hold copies of other people's pages, so keep them in the Actions cache
 
 ## What this repository watches
 
-Refmark began as the way [neon1](https://neon1.tech) keeps its published knowledge honest. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories, and [the watch workflow](.github/workflows/watch.yml) checks them every week. Each source lists the files that cite it, so a change leads straight to the pages that need another look.
+Refmark began as the way [neon1](https://neon1.tech) finds out when a source its published material cites has changed. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories, and [the watch workflow](.github/workflows/watch.yml) is set to check them every Monday at 13:17 UTC. Each source lists the files that cite it, so a change leads straight to the pages that need another look.
 
 The list is rebuilt from fresh clones of those repositories:
 

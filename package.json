@@ -1,7 +1,7 @@
 {
   "name": "refmark",
-  "version": "0.1.0",
-  "description": "Watch the sources your documents cite and find out when they change.",
+  "version": "0.1.2",
+  "description": "Flags the sources your documents cite when they change, so a person can review them.",
   "type": "module",
   "bin": {
     "refmark": "bin/refmark.mjs"
