@@ -2,6 +2,11 @@
 
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
+## v0.1.3 - 2026-11-14
+
+### Changed
+- The neon1 watch list and the README's scan command use the new names of five neon1 repositories: soc-2-readiness, incident-response-for-small-teams, compliance-basics, phishing-awareness-kit, and household-tech-handbook. The cited file paths follow the renames, so the watch reports the same sources under their new locations.
+
 ## v0.1.2 - 2026-11-14
 
 ### Changed

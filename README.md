@@ -145,13 +145,13 @@ The list is rebuilt from fresh clones of those repositories:
 
 ```sh
 refmark scan --manifest watch/neon1.json --prune \
-  ../neon1-corpus ../neon1-site ../soc-it-2-me ../phish-out-of-water \
-  ../home-is-where-the-smart-is ../ready-secure-go ../you-have-20-seconds-to-comply \
-  ../there-are-no-incidents \
-  --as neon1llc/neon1-corpus --as neon1llc/neon1-site --as neon1llc/soc-it-2-me \
-  --as neon1llc/phish-out-of-water --as neon1llc/home-is-where-the-smart-is \
-  --as neon1llc/ready-secure-go --as neon1llc/you-have-20-seconds-to-comply \
-  --as neon1llc/there-are-no-incidents
+  ../neon1-corpus ../neon1-site ../soc-2-readiness ../phishing-awareness-kit \
+  ../household-tech-handbook ../ready-secure-go ../compliance-basics \
+  ../incident-response-for-small-teams \
+  --as neon1llc/neon1-corpus --as neon1llc/neon1-site --as neon1llc/soc-2-readiness \
+  --as neon1llc/phishing-awareness-kit --as neon1llc/household-tech-handbook \
+  --as neon1llc/ready-secure-go --as neon1llc/compliance-basics \
+  --as neon1llc/incident-response-for-small-teams
 ```
 
 ## Related tools
