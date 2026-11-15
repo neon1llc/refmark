@@ -1,6 +1,6 @@
 # The manifest format
 
-A manifest is a JSON file, `refmark.json` by default. Refmark reads it on every command and writes it only during `init`, `add`, and `scan`. Its lockfile sits beside it, with `.lock.json` in place of `.json`, and its snapshot cache sits in `.refmark/<name>/` in the same folder.
+A manifest is a JSON file, `refmark.json` by default. Refmark reads it on every command and writes it only during `init`, `add`, and `scan`. The lockfile sits beside it, ending in `.lock.json`, and the snapshot cache sits in `.refmark/<name>/` in the same folder.
 
 ## Top level
 
@@ -17,9 +17,9 @@ A manifest is a JSON file, `refmark.json` by default. Refmark reads it on every 
 | Field | Default | Purpose |
 |---|---|---|
 | `concurrency` | `8` | Requests in flight at once. |
-| `perHost` | `2` | Requests in flight to any one host, so one site is never flooded. |
+| `perHost` | `2` | Requests in flight to any one host. |
 | `timeout` | `30000` | Milliseconds before a request is abandoned. |
-| `userAgent` | `refmark/<version> (+https://github.com/neon1llc/refmark)` | The `User-Agent` header. The `REFMARK_USER_AGENT` environment variable overrides it. Some publishers ask automated clients to include contact details here. |
+| `userAgent` | `refmark/<version> (+https://github.com/neon1llc/refmark)` | The `User-Agent` header. The `REFMARK_USER_AGENT` environment variable overrides it. Some publishers ask for contact details here. |
 
 ## Scan
 
@@ -36,7 +36,7 @@ Scanning always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`,
 
 | Field | Required | Purpose |
 |---|---|---|
-| `id` | Yes | A stable name: lowercase letters, digits, dots, dashes, and underscores. `scan` and `add` derive one from the URL. |
+| `id` | Yes | A stable name of lowercase letters, digits, dots, dashes, and underscores. `scan` and `add` derive one from the URL. |
 | `url` | Yes | The address your documents cite, including any `#fragment`. |
 | `title` | No | A readable name, taken from the link text when scanned. |
 | `fetch` | No | A different URL to request, such as an official API for the cited page. Reports still show `url`. |
@@ -46,7 +46,7 @@ Scanning always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`,
 | `defaultIgnore` | No | Set to `false` to turn off the built-in ignores for review stamps, copyright lines, and skip links. |
 | `userAgent` | No | A `User-Agent` for this source only. |
 | `headers` | No | Extra request headers for this source, such as `{ "accept": "application/json" }`. |
-| `note` | No | Free text for people reading the manifest. |
+| `note` | No | Free text for readers. |
 | `citedIn` | No | Files that cite the source. `scan` maintains it, and reports link to it. |
 
 ## Modes
@@ -61,7 +61,7 @@ Scanning always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`,
 
 ## Scopes
 
-A scope has exactly one key. When a source has none, a `#fragment` in its URL selects that section, and otherwise the page's main content is used: the first of `main`, `[role="main"]`, `article`, `#main-content`, `#content`, or `body` that holds real text, without navigation, headers, footers, asides, forms, and hidden elements.
+A scope has exactly one key. With no scope, a `#fragment` in the URL selects that section. Otherwise Refmark uses the page's main content: the first of `main`, `[role="main"]`, `article`, `#main-content`, `#content`, or `body` that holds real text, without navigation, headers, footers, asides, forms, and hidden elements.
 
 | Key | Example | Selects |
 |---|---|---|
@@ -72,13 +72,13 @@ A scope has exactly one key. When a source has none, a `#fragment` in its URL se
 
 ## Patterns
 
-`exclude`, `ignorePaths`, `ignore`, and rule `match` values are regular expressions. Write `"/pattern/flags"` to add flags, such as `"/^updated .*$/i"`, or a bare pattern for a case-sensitive match. Remember to double each backslash inside JSON strings.
+`exclude`, `ignorePaths`, `ignore`, and rule `match` values are regular expressions. Write `"/pattern/flags"` to add flags, such as `"/^updated .*$/i"`. A bare pattern is case-sensitive. Double each backslash inside JSON strings.
 
 ## Rules
 
 A rule applies defaults to every source whose URL matches it. The first matching rule is used, and fields set on a source override the rule. A rule may set `fetch`, `mode`, `scope`, `ignore`, `defaultIgnore`, `userAgent`, `headers`, and `note`. In `fetch`, `$1` to `$9` insert the match's groups, and query parameters left empty by an optional group are dropped.
 
-This rule checks every cited eCFR section through eCFR's versioner API, which the site asks automated clients to use, and fingerprints the list of amendments:
+This rule checks every cited eCFR section through eCFR's versioner API, which the site asks automated clients to use, and fingerprints the amendment list:
 
 ```json
 {
@@ -91,4 +91,4 @@ This rule checks every cited eCFR section through eCFR's versioner API, which th
 
 ## The lockfile
 
-The lockfile records each source's accepted state: the final URL after redirects, the HTTP status, the content type, the mode, the SHA-256 fingerprint, a key describing the scope settings in force, any `ETag` and `Last-Modified` values, and when it was accepted. Entries are sorted by id, so accepting one source changes one entry. Edit it only through `refmark accept`.
+The lockfile records each source's accepted state: final URL after redirects, HTTP status, content type, mode, SHA-256 fingerprint, a key for the scope settings, any `ETag` and `Last-Modified` values, and the acceptance time. Entries are sorted by id, so accepting one source changes one entry. Edit it only through `refmark accept`.
