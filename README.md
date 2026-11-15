@@ -2,7 +2,7 @@
 
 Flags the sources your documents cite when they change, so a person can review them.
 
-It's for people who maintain guides, training material, policies, or knowledge bases that cite outside sources such as standards, regulations, agency guidance, and vendor documentation. Those pages change without notice. Refmark fingerprints the part of each source you rely on, checks it when you run it or on a schedule, and reports what changed, broke, or moved, with a diff of the changed text. A check might report:
+It's for people who maintain guides, training material, policies, or knowledge bases that cite outside sources such as standards, regulations, agency guidance, and vendor documentation. Those pages change without notice. Refmark fingerprints the part of each source you rely on, checks it when you run it or on a schedule, and reports what changed, broke, or moved, with a diff of the changed text.
 
 ```text
 $ refmark check
@@ -15,7 +15,7 @@ broken (1)
 421 sources checked: 1 changed, 1 broken, 419 unchanged
 ```
 
-Refmark tells you a cited source changed, so a person can read the change and decide whether the document needs updating. It can't judge whether a document is accurate. It only sees the sources you list, the parts you scope, and the text a server sends.
+Refmark can't judge whether a document is accurate. It only sees the sources you list, the parts you scope, and the text a server sends.
 
 Status: pre-1.0 (`v0.x`).
 
@@ -102,7 +102,7 @@ The first source has no scope, so its `#levels` fragment selects that section. [
 
 ## In GitHub Actions
 
-Refmark ships as an action. This workflow checks sources every Monday and opens an issue when something needs review:
+This workflow checks sources every Monday and opens an issue when something needs review:
 
 ```yaml
 name: sources
@@ -142,8 +142,6 @@ Snapshots hold copies of other people's pages, so keep them in the Actions cache
 ## What this repository watches
 
 Refmark began as the way [neon1](https://neon1.tech) finds out when a source its published material cites has changed. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories. [The watch workflow](.github/workflows/watch.yml) checks them every Monday at 13:17 UTC. Each source lists the files that cite it.
-
-Rebuild the list from fresh clones of those repositories:
 
 ```sh
 refmark scan --manifest watch/neon1.json --prune \

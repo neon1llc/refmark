@@ -2,6 +2,11 @@
 
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
+
+## Unreleased
+
+- Cut wording that repeats a table, list, or linked page.
+
 ## v0.1.4 - 2026-11-15
 
 ### Changed
