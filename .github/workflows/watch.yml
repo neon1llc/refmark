@@ -20,8 +20,8 @@ jobs:
   watch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -30,7 +30,7 @@ jobs:
       # Snapshots of accepted text stay in the Actions cache, never in the repository, because they
       # are copies of other people's pages. They let the report show what changed, not only that it did.
       - name: Restore snapshots
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: watch/.refmark
           key: refmark-snapshots-${{ github.run_id }}
