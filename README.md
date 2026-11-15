@@ -2,7 +2,7 @@
 
 Flags the sources your documents cite when they change, so a person can review them.
 
-Guides, training material, policies, and knowledge bases lean on outside sources: standards, regulations, agency guidance, and vendor documentation. Those pages are revised, reorganized, and retired without notice, and a document that cited them correctly last year may need another look today. Refmark records a fingerprint of the part of each source you rely on, checks it when you run it or on a schedule you set, and reports what changed, what broke, and what moved, with a diff of the changed text. A check might report:
+It's for people who maintain guides, training material, policies, or knowledge bases that cite outside sources such as standards, regulations, agency guidance, and vendor documentation. Those pages change without notice. Refmark fingerprints the part of each source you rely on, checks it when you run it or on a schedule, and reports what changed, broke, or moved, with a diff of the changed text. A check might report:
 
 ```text
 $ refmark check
@@ -15,17 +15,19 @@ broken (1)
 421 sources checked: 1 changed, 1 broken, 419 unchanged
 ```
 
-Refmark is editorial support. It tells you that a cited source changed, so a person can read the change and decide whether the document needs updating. It does not judge whether a document is accurate, and it cannot promise that a document stays accurate: it only sees the sources you list, only the parts you scope, and only the text a server sends.
+Refmark tells you a cited source changed, so a person can read the change and decide whether the document needs updating. It can't judge whether a document is accurate. It only sees the sources you list, the parts you scope, and the text a server sends.
+
+Status: pre-1.0 (`v0.x`).
 
 ## How it works
 
-1. **Scope.** Each source names the part of the page that matters: a CSS selector, a heading, the section a link's `#fragment` points to, or a JSON pointer. Without a scope, Refmark reads the page's main content and leaves out navigation, headers, footers, and scripts.
-2. **Normalize.** The scoped text is reduced to its visible words, one block per line, with whitespace and Unicode variants folded and review stamps such as "Page last reviewed" removed.
-3. **Fingerprint.** The normalized text is hashed with SHA-256 and stored in a lockfile you commit. PDFs and other files are hashed byte for byte.
-4. **Compare.** Each check sends the stored `ETag` and `Last-Modified` values, so an unchanged page often costs one short request. When the fingerprint differs, Refmark diffs the text against the last accepted snapshot and rates the change as minor, moderate, or major.
-5. **Accept.** After you review a change and update your documents, `refmark accept` records the new state. The lockfile diff in your pull request shows exactly which sources were re-reviewed.
+1. **Scope.** Each source names the part of the page that matters: a CSS selector, a heading, a link's `#fragment`, or a JSON pointer. Without one, Refmark reads the main content and skips navigation, headers, footers, and scripts.
+2. **Normalize.** The scoped text is cut to visible words, one block per line, with whitespace and Unicode variants folded and review stamps such as "Page last reviewed" removed.
+3. **Fingerprint.** The text is hashed with SHA-256 and stored in a lockfile you commit. PDFs and other files are hashed byte for byte.
+4. **Compare.** Each check sends the stored `ETag` and `Last-Modified` values, so an unchanged page often costs one short request. When the fingerprint differs, Refmark diffs against the last accepted snapshot and rates the change minor, moderate, or major.
+5. **Accept.** After you review a change and update your documents, `refmark accept` records the new state. The lockfile diff in your pull request shows which sources were re-reviewed.
 
-[How it works](docs/how-it-works.md) explains these choices and compares them with other approaches.
+See [How it works](docs/how-it-works.md) for the reasoning.
 
 ## Install
 
@@ -47,7 +49,7 @@ refmark accept --all         # records the current state as the baseline
 git add refmark.json refmark.lock.json .gitignore
 ```
 
-From then on, `refmark check` exits with 1 when a source needs review and 0 when everything matches. Run `refmark scan` again whenever your documents change, and it keeps each source's list of citing files up to date.
+From then on, `refmark check` exits with 1 when a source needs review and 0 when everything matches. Run `refmark scan` again when your documents change to keep each source's list of citing files current.
 
 ## Commands
 
@@ -61,7 +63,7 @@ From then on, `refmark check` exits with 1 when a source needs review and 0 when
 | `refmark show <id\|url>` | Prints the exact text Refmark compares for a source. Use it to tune a scope. |
 | `refmark validate` | Checks the manifest and lockfile without fetching anything. Suited to CI on every push. |
 
-Every command takes `--manifest <file>` (default `refmark.json`). The lockfile sits beside the manifest with `.lock.json` in place of `.json`.
+Every command takes `--manifest <file>` (default `refmark.json`). The lockfile sits beside it, ending in `.lock.json`.
 
 ## Results
 
@@ -69,17 +71,17 @@ Every command takes `--manifest <file>` (default `refmark.json`). The lockfile s
 |---|---|---|
 | unchanged | The fingerprint matches the accepted one. | No |
 | changed | The scoped content differs from what was accepted. | Yes |
-| scope lost | The selector, heading, fragment, or JSON pointer no longer matches, which usually means the page was reorganized. | Yes |
-| scope edited | The manifest's scope or ignore rules changed since the source was accepted, so it must be accepted again. | Yes |
+| scope lost | The selector, heading, fragment, or JSON pointer no longer matches, usually because the page was reorganized. | Yes |
+| scope edited | The manifest's scope or ignore rules changed since acceptance. Accept again. | Yes |
 | broken | The server answered 404 or 410, or the host no longer exists. | Yes |
-| unreachable | The server refused or timed out (403, 429, 5xx, timeouts). Many sites block automated requests, so this only warns unless you pass `--strict`. | No |
+| unreachable | The server refused or timed out (403, 429, 5xx, timeouts). Many sites block automated requests, so this warns unless you pass `--strict`. | No |
 | new | The source has no accepted state yet. | No |
 
-A result also notes when a source now redirects somewhere other than where it did when accepted.
+A result also notes when a source now redirects somewhere new.
 
 ## Scoping a source
 
-The manifest is plain JSON. A source needs an `id` and a `url`. Everything else is optional.
+The manifest is plain JSON. A source needs only an `id` and a `url`.
 
 ```json
 {
@@ -96,11 +98,11 @@ The manifest is plain JSON. A source needs an `id` and a `url`. Everything else 
 }
 ```
 
-The first source has no scope, so its `#levels` fragment selects that section of the page. [The manifest format](docs/manifest.md) lists every field.
+The first source has no scope, so its `#levels` fragment selects that section. [The manifest format](docs/manifest.md) lists every field.
 
 ## In GitHub Actions
 
-Refmark ships as an action. This workflow is set to check sources every Monday and to open an issue when something needs review:
+Refmark ships as an action. This workflow checks sources every Monday and opens an issue when something needs review:
 
 ```yaml
 name: sources
@@ -135,13 +137,13 @@ jobs:
         run: gh issue create --title "Cited sources need review" --body-file refmark-report.md
 ```
 
-Snapshots hold copies of other people's pages, so keep them in the Actions cache rather than in the repository. Only the manifest and lockfile, which hold URLs and fingerprints, belong in version control.
+Snapshots hold copies of other people's pages, so keep them in the Actions cache, not the repository. Commit only the manifest and lockfile.
 
 ## What this repository watches
 
-Refmark began as the way [neon1](https://neon1.tech) finds out when a source its published material cites has changed. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories, and [the watch workflow](.github/workflows/watch.yml) is set to check them every Monday at 13:17 UTC. Each source lists the files that cite it, so a change leads straight to the pages that need another look.
+Refmark began as the way [neon1](https://neon1.tech) finds out when a source its published material cites has changed. [`watch/neon1.json`](watch/neon1.json) lists the 440 outside sources, on 143 sites, cited across neon1's knowledge corpus, website, and education repositories. [The watch workflow](.github/workflows/watch.yml) checks them every Monday at 13:17 UTC. Each source lists the files that cite it.
 
-The list is rebuilt from fresh clones of those repositories:
+Rebuild the list from fresh clones of those repositories:
 
 ```sh
 refmark scan --manifest watch/neon1.json --prune \
@@ -156,11 +158,15 @@ refmark scan --manifest watch/neon1.json --prune \
 
 ## Related tools
 
-- [changedetection.io](https://github.com/dgtlmoon/changedetection.io) is a self-hosted web app for watching pages, with CSS, XPath, and JSON filters, visual selection, and many notification channels. It suits watching many pages by hand from a dashboard.
-- [urlwatch](https://github.com/thp/urlwatch) is a command-line watcher with a chain of filters and a local cache. It suits personal monitoring from one machine.
-- [lychee](https://github.com/lycheeverse/lychee) checks links in documents and reports the broken ones. It does not notice when a working page's content changes.
+- [changedetection.io](https://github.com/dgtlmoon/changedetection.io) is a self-hosted web app for watching pages from a dashboard, with CSS, XPath, and JSON filters and many notification channels.
+- [urlwatch](https://github.com/thp/urlwatch) is a command-line watcher with filters and a local cache, suited to personal monitoring from one machine.
+- [lychee](https://github.com/lycheeverse/lychee) reports broken links in documents. It doesn't notice when a working page's content changes.
 
-Refmark starts from the documents instead of the pages: it finds what they cite, keeps a reviewable baseline in the repository, and points each change back to the files that rely on it.
+Refmark starts from your documents. It finds what they cite, keeps a reviewable baseline in the repository, and points each change back to the files that rely on it.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
