@@ -262,7 +262,7 @@
       "url": "https://www.census.gov/naics/",
       "title": "North American Industry Classification System",
       "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/capabilities.md"
+        "neon1llc/neon1-corpus/corpus/engagement/capabilities.md"
       ]
     },
     {
@@ -2879,7 +2879,7 @@
       "url": "https://www.hhs.gov/grants/contracts/get-ready-to-do-business/sample-capability-statement/index.html",
       "title": "Sample capability statement",
       "citedIn": [
-        "neon1llc/neon1-corpus/corpus/company/capabilities.md"
+        "neon1llc/neon1-corpus/corpus/engagement/capabilities.md"
       ]
     },
     {
