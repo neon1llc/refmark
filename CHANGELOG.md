@@ -3,6 +3,11 @@
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
 
+## v0.1.7 - 2026-11-19
+
+### Changed
+- The README and how-it-works page say that an accepted fingerprint, or a `304` response, does not show that a person reviewed a source or that its content supports a claim. Newly listed sources are not monitored until their baseline is accepted.
+
 ## v0.1.6 - 2026-11-19
 
 ### Changed

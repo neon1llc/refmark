@@ -6,7 +6,7 @@ Refmark asks one question of each cited source: is the part I relied on still wh
 
 Refmark uses the first two methods below as cheap signals and builds its answer on the third.
 
-**HTTP validators.** Servers may send an `ETag` or `Last-Modified` date. Sending them back with `If-None-Match` and `If-Modified-Since` lets the server answer `304 Not Modified` without the page. Many servers omit the headers or change them on every response, so a validator can prove a page is unchanged but never that it changed.
+**HTTP validators.** Servers may send an `ETag` or `Last-Modified` date. Sending them back with `If-None-Match` and `If-Modified-Since` lets the server answer `304 Not Modified` without the page. Many servers omit the headers or change them on every response, so a `304` is the publisher's statement that the response is unchanged. It depends on the server's validators being correct and does not check the content itself.
 
 **A hash of the whole response.** Hashing raw bytes catches every edit, including rotating banners, build numbers, session tokens, "last updated" stamps, and new footer links. On most modern pages the hash changes daily. It suits only files replaced deliberately, such as PDFs, so Refmark uses it for those (`bytes` mode).
 
@@ -26,7 +26,7 @@ Refmark uses the first two methods below as cheap signals and builds its answer 
 
 ## Why a lockfile
 
-The lockfile turns "I checked my sources" into a record. Accepting a change edits one entry, so a pull request that updates a guide also shows which sources were re-read. The manifest says what to watch and the lockfile says what was last accepted. Neither holds copies of anyone's pages, so both can be published.
+The lockfile records the source state an operator accepted. Accepting a change edits one entry, so a pull request that updates a guide also shows which fingerprints were accepted. It does not prove that anyone read the source or that it supports the claim. The manifest says what to watch and the lockfile says what was last accepted. Neither holds copies of anyone's pages, so both can be published.
 
 Accepted text goes in the snapshot cache (`.refmark/`), which `refmark init` adds to `.gitignore`. In CI, keep it in the build cache. With an empty cache, Refmark still detects changes from fingerprints and fills the cache with unchanged text it fetches, so later reports can show diffs.
 

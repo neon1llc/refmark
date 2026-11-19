@@ -25,7 +25,7 @@ Status: pre-1.0 (`v0.x`). The tests cover scoping, normalization, diffing, and t
 2. **Normalize.** The scoped text is cut to visible words, one block per line, with whitespace and Unicode variants folded and review stamps such as "Page last reviewed" removed.
 3. **Fingerprint.** The text is hashed with SHA-256 and stored in a lockfile you commit. PDFs and other files are hashed byte for byte.
 4. **Compare.** Each check sends the stored `ETag` and `Last-Modified` values, so an unchanged page often costs one short request. When the fingerprint differs, Refmark diffs against the last accepted snapshot and rates the change minor, moderate, or major.
-5. **Accept.** After you review a change and update your documents, `refmark accept` records the new state. The lockfile diff in your pull request shows which sources were re-reviewed.
+5. **Accept.** After you review a change and update your documents, `refmark accept` records the new state. The lockfile diff in your pull request shows which source states were accepted. It does not prove a person reviewed them.
 
 See [How it works](docs/how-it-works.md) for the reasoning.
 
@@ -160,6 +160,8 @@ refmark scan --manifest watch/neon1.json --prune \
   --as neon1llc/ready-secure-go --as neon1llc/compliance-basics \
   --as neon1llc/incident-response-for-small-teams
 ```
+
+Run `refmark validate --manifest watch/neon1.json` to see which baselines are accepted and which sources still need review. A newly listed source is not monitored until its baseline has been checked and accepted.
 
 ## Related tools
 
