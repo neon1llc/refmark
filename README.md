@@ -17,7 +17,7 @@ broken (1)
 
 Refmark can't judge whether a document is accurate. It only sees the sources you list, the parts you scope, and the text a server sends.
 
-Status: pre-1.0 (`v0.x`).
+Status: pre-1.0 (`v0.x`). The tests cover scoping, normalization, diffing, and the lockfile. neon1's own watch has run in GitHub Actions since 2026-11-14. No one outside neon1 has used it yet.
 
 ## How it works
 
@@ -128,7 +128,7 @@ jobs:
           key: refmark-${{ github.run_id }}
           restore-keys: refmark-
       - id: refmark
-        uses: neon1llc/refmark@main   # pin to a commit SHA for stability
+        uses: neon1llc/refmark@v0.1.6   # or a commit SHA
         with:
           fail-on-change: 'false'
       - if: steps.refmark.outputs.status == '1'
@@ -138,6 +138,13 @@ jobs:
 ```
 
 Snapshots hold copies of other people's pages, so keep them in the Actions cache, not the repository. Commit only the manifest and lockfile.
+
+## Limits
+
+- Refmark fetches pages without running JavaScript. A page that builds its text in the browser can't be fingerprinted.
+- Many sites refuse automated requests. On the first scheduled run of neon1's watch, 77 of 440 sources, mostly US federal, state, and legal sites, answered 403 or timed out. Refmark reports these as unreachable and doesn't check them. Review them by hand on a schedule, or run Refmark from a network those sites allow.
+- A changed fingerprint means the scoped text differs. It doesn't say the change matters or that your document is now wrong. The diff and the rating help you decide.
+- The rating (minor, moderate, major) counts changed lines. It doesn't weigh meaning.
 
 ## What this repository watches
 

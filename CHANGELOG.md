@@ -3,6 +3,11 @@
 Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
 
 
+## v0.1.6 - 2026-11-19
+
+### Changed
+- The README now states what has been tested and used, lists Refmark's limits (no JavaScript, sites that refuse automated requests, line-count ratings), and pins the example workflow to a release tag.
+
 ## v0.1.5 - 2026-11-15
 
 ### Changed
