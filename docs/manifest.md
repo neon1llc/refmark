@@ -1,6 +1,6 @@
 # The manifest format
 
-A manifest is a JSON file, `refmark.json` by default. Refmark reads it on every command and writes it only during `init`, `add`, and `scan`. The lockfile sits beside it, ending in `.lock.json`, and the snapshot cache sits in `.refmark/<name>/` in the same folder.
+A manifest is a JSON file, `refmark.json` by default. Every command reads it, and only `init`, `add`, and `scan` write it. The lockfile sits beside it as `.lock.json`, and the snapshot cache sits in `.refmark/<name>/` in the same folder.
 
 ## Top level
 
@@ -19,18 +19,18 @@ A manifest is a JSON file, `refmark.json` by default. Refmark reads it on every 
 | `concurrency` | `8` | Requests in flight at once. |
 | `perHost` | `2` | Requests in flight to any one host. |
 | `timeout` | `30000` | Milliseconds before a request is abandoned. |
-| `userAgent` | `refmark/<version> (+https://github.com/neon1llc/refmark)` | The `User-Agent` header. The `REFMARK_USER_AGENT` environment variable overrides it. Some publishers ask for contact details here. |
+| `userAgent` | `refmark/<version> (+https://github.com/neon1llc/refmark)` | The `User-Agent` header. The `REFMARK_USER_AGENT` environment variable overrides it. Some publishers want contact details here. |
 
 ## Scan
 
 | Field | Purpose |
 |---|---|
 | `exclude` | Patterns for URLs that are never added, such as your own site, localhost, or font hosts. |
-| `ignorePaths` | Patterns for citing files that are skipped, matched against the labeled path (for example `org/repo/site/build/page.html`). Use it for generated copies of documents. |
+| `ignorePaths` | Patterns for citing files to skip, matched against the labeled path (for example `org/repo/site/build/page.html`). Use it for generated copies of documents. |
 | `sections` | Heading names. When set, only Markdown under matching headings is read, such as `["Sources", "References"]`. |
 | `extensions` | File extensions to read. Defaults to `.md`, `.markdown`, `.mdx`, `.html`, `.htm`, `.txt`, `.rst`, and `.adoc`. |
 
-Scanning always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`, `coverage`, and fenced code blocks in Markdown.
+`scan` always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`, `coverage`, and fenced code blocks in Markdown.
 
 ## References
 
@@ -57,7 +57,7 @@ Scanning always skips hidden folders, `node_modules`, `vendor`, `dist`, `build`,
 | `text` | The response as text | Plain text files |
 | `json` | Canonical JSON with sorted keys, optionally scoped by a pointer | APIs and data files |
 | `bytes` | The raw response | PDFs, images, and other files |
-| `status` | Only whether the source answers | Homepages and tools, where the content is not what a document relies on |
+| `status` | Only whether the source answers | Homepages and tools, where the content isn't what a document relies on |
 
 ## Scopes
 
@@ -76,9 +76,9 @@ A scope has exactly one key. With no scope, a `#fragment` in the URL selects tha
 
 ## Rules
 
-A rule applies defaults to every source whose URL matches it. The first matching rule is used, and fields set on a source override the rule. A rule may set `fetch`, `mode`, `scope`, `ignore`, `defaultIgnore`, `userAgent`, `headers`, and `note`. In `fetch`, `$1` to `$9` insert the match's groups, and query parameters left empty by an optional group are dropped.
+A rule sets defaults for every source whose URL matches. The first matching rule wins, and fields on a source override it. A rule may set `fetch`, `mode`, `scope`, `ignore`, `defaultIgnore`, `userAgent`, `headers`, and `note`. In `fetch`, `$1` to `$9` insert the match's groups, and query parameters left empty by an optional group are dropped.
 
-This rule checks every cited eCFR section through eCFR's versioner API, which the site asks automated clients to use, and fingerprints the amendment list:
+This rule checks each cited eCFR section through eCFR's versioner API, which the site asks automated clients to use, and fingerprints the amendment list:
 
 ```json
 {
@@ -91,4 +91,4 @@ This rule checks every cited eCFR section through eCFR's versioner API, which th
 
 ## The lockfile
 
-The lockfile records each source's accepted state: final URL after redirects, HTTP status, content type, mode, SHA-256 fingerprint, a key for the scope settings, any `ETag` and `Last-Modified` values, and the acceptance time. Entries are sorted by id, so accepting one source changes one entry. Edit it only through `refmark accept`.
+The lockfile records each source's accepted state: final URL after redirects, HTTP status, content type, mode, SHA-256 fingerprint, a key for the scope settings, any `ETag` and `Last-Modified` values, and the acceptance time. Entries are sorted by id, so accepting one source changes one entry. Edit it only with `refmark accept`.

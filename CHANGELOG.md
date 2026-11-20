@@ -1,22 +1,27 @@
 # Changelog
 
-Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). Each released version gets an annotated tag on the commit it names, added by the release workflow.
+Refmark uses `v0.MINOR.PATCH` until v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). The release workflow adds an annotated tag on each version's commit.
 
+## v0.1.8 - 2026-11-20
+
+### Changed
+- Shorter README, how-it-works page, manifest reference, and contributing guide.
+- The README's demo output and first-run figures match the 440-source watch: 75 sources unreachable, not 77.
 
 ## v0.1.7 - 2026-11-19
 
 ### Changed
-- The README and how-it-works page say that an accepted fingerprint, or a `304` response, does not show that a person reviewed a source or that its content supports a claim. Newly listed sources are not monitored until their baseline is accepted.
+- The README and how-it-works page say that an accepted fingerprint or a `304` response doesn't show a person reviewed a source or that it supports a claim. Newly listed sources aren't monitored until their baseline is accepted.
 
 ## v0.1.6 - 2026-11-19
 
 ### Changed
-- The README now states what has been tested and used, lists Refmark's limits (no JavaScript, sites that refuse automated requests, line-count ratings), and pins the example workflow to a release tag.
+- The README states what has been tested and used, lists Refmark's limits (no JavaScript, sites that refuse automated requests, line-count ratings), and pins the example workflow to a release tag.
 
 ## v0.1.5 - 2026-11-15
 
 ### Changed
-- Cut wording that repeats a table, list, or linked page.
+- Cut wording that repeated a table, list, or linked page.
 - Each release's changelog entry is published as its GitHub release.
 
 ## v0.1.4 - 2026-11-15
@@ -27,19 +32,19 @@ Refmark uses `v0.MINOR.PATCH` until its first stable release, v1.0.0, following 
 ## v0.1.3 - 2026-11-14
 
 ### Changed
-- The neon1 watch list and the README's scan command use the new names of five neon1 repositories: soc-2-readiness, incident-response-for-small-teams, compliance-basics, phishing-awareness-kit, and household-tech-handbook. The cited file paths follow the renames, so the watch reports the same sources under their new locations.
+- The neon1 watch list and the README's scan command use the new names of five neon1 repositories: soc-2-readiness, incident-response-for-small-teams, compliance-basics, phishing-awareness-kit, and household-tech-handbook. The watch reports the same sources under their new paths.
 
 ## v0.1.2 - 2026-11-14
 
 ### Changed
-- The README and package description now say that Refmark is editorial support: it flags cited sources that changed so a person can review them, and it does not check or guarantee that a document is accurate.
+- The README and package description say Refmark is editorial support: it flags cited sources that changed so a person can review them, and it doesn't check that a document is accurate.
 - The README describes the weekly watch as what the workflow is set to do, not as a record of past runs.
-- `package.json` now reports the released version. It still said 0.1.0 after v0.1.1.
+- `package.json` reports the released version. It still said 0.1.0 after v0.1.1.
 
 ## v0.1.1 - 2026-11-12
 
 ### Changed
-- The neon1 watch list adds the 13 new sources cited by There Are No Incidents, neon1's incident response training, for 440 sources on 143 sites.
+- The neon1 watch list adds 13 sources cited by There Are No Incidents, neon1's incident response training, for 440 sources on 143 sites.
 
 ## v0.1.0 - 2026-11-12
 
