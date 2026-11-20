@@ -5,7 +5,8 @@ Refmark uses `v0.MINOR.PATCH` until v1.0.0, following neon1's [versioning standa
 ## v0.1.8 - 2026-11-20
 
 ### Changed
-- Shorter README, how-it-works page, manifest reference, and contributing guide.
+- Shorter README, how-it-works page, manifest reference, contributing guide, and `--help` text.
+- The security policy gives an email address for vulnerability reports. The repository has no private reporting button.
 - The README's demo output and first-run figures match the 440-source watch: 75 sources unreachable, not 77.
 
 ## v0.1.7 - 2026-11-19

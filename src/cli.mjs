@@ -10,29 +10,28 @@ import { scan, merge } from './scan.mjs';
 import { formatText, formatMarkdown } from './report.mjs';
 import { DEFAULT_USER_AGENT } from './fetch.mjs';
 
-const HELP = `refmark: watch the sources your documents cite and find out when they change
+const HELP = `refmark: find out when the sources your documents cite change
 
 Usage: refmark <command> [options]
 
 Commands
-  init                      create refmark.json in this folder
+  init                      create refmark.json
   add <url>                 add a source (--id, --title, --selector, --heading, --mode)
-  scan <path>...            find outside links in Markdown and HTML and add them
-                              --as <label>    label for each path, in order (repeatable)
-                              --sections <a,b> only read Markdown under these headings
-                              --prune         drop scanned sources no longer cited
-                              --dry-run       print what would change
-  check [id|url]...         fetch sources and compare with the lockfile
-                              --report <file> write a Markdown report
+  scan <path>...            add outside links found in Markdown and HTML
+                              --as <label>     label for each path, in order
+                              --sections <a,b> read only Markdown under these headings
+                              --prune          drop sources no longer cited
+                              --dry-run        print what would change
+  check [id|url]...         compare sources with the lockfile
+                              --report <file>  write a Markdown report
                               --link-base <url> prefix or template for "cited in" links
-                                              ({cite}, {head}, {rest}; see README)
-                              --json          print results as JSON
-                              --strict        treat unreachable sources as failures
-                              -v, --verbose   list unchanged sources and show diffs
-  accept [id|url]...        record the current state of sources in the lockfile
-                              --all           accept every source and drop stale entries
-  show <id|url>             print the text refmark compares for one source
-  validate                  check the manifest and lockfile without fetching anything
+                                               ({cite}, {head}, {rest})
+                              --json           print results as JSON
+                              --strict         fail on unreachable sources
+                              -v, --verbose    list unchanged sources and show diffs
+  accept [id|url]...        record current state in the lockfile (--all: every source)
+  show <id|url>             print the text refmark compares
+  validate                  check the manifest and lockfile without fetching
 
 Options
   -m, --manifest <file>     manifest path (default: refmark.json)
