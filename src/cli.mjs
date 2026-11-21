@@ -163,6 +163,7 @@ async function checkCommand(args, opts) {
   const refs = select(effectiveReferences(manifest), args);
   const tty = process.stderr.isTTY && !opts.json;
   const results = await check(refs, lock, settingsFrom(manifest), paths, {
+    known: new Set(manifest.references.map((r) => r.id)),
     onResult: tty ? (r, done, total) => process.stderr.write(`\r${done}/${total} checked`) : undefined,
   });
   if (tty) process.stderr.write('\r\x1b[K');
