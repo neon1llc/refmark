@@ -66,7 +66,7 @@ Every command takes `--manifest <file>` (default `refmark.json`).
 | scope lost | The selector, heading, fragment, or JSON pointer no longer matches, usually after a page reorganization. | Yes |
 | scope edited | The manifest's scope or ignore rules changed since acceptance. Accept again. | Yes |
 | broken | The server answered 404 or 410, or the host no longer exists. | Yes |
-| unreachable | The server refused or timed out (403, 429, 5xx). Warns unless you pass `--strict`. | No |
+| unreachable | The server refused or timed out (403, 429, 5xx). Warns unless you pass `--strict`. The report shows how long. | No |
 | new | No accepted state yet. | No |
 
 ## Scoping a source
@@ -128,7 +128,7 @@ Snapshots hold copies of other people's pages, so keep them in the Actions cache
 ## Limits
 
 - Refmark doesn't run JavaScript, so a page that builds its text in the browser can't be fingerprinted.
-- Many sites refuse automated requests. On the first scheduled run of neon1's watch, 75 of 440 sources, mostly US federal, state, and legal sites, were unreachable (69 answered 403, 4 timed out). Refmark doesn't check them. Review them by hand, or run Refmark from a network those sites allow.
+- Many sites refuse automated requests. On the first scheduled run of neon1's watch, 75 of 440 sources, mostly US federal, state, and legal sites, were unreachable (69 answered 403, 4 timed out). Refmark doesn't check them. The report lists them by how long each has been unreachable, and [Unreachable sources](docs/unreachable.md) covers API, archive, and manual routes. Review the rest by hand, or run Refmark from a network those sites allow.
 - A changed fingerprint means the scoped text differs, not that the change matters or your document is wrong.
 - The rating counts changed lines. It doesn't weigh meaning.
 

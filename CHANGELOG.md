@@ -2,6 +2,13 @@
 
 Refmark uses `v0.MINOR.PATCH` until v1.0.0, following neon1's [versioning standard](https://neon1.tech/knowledge/standards/versioning/). The release workflow adds an annotated tag on each version's commit.
 
+## Unreleased
+
+### Added
+- `check` records how long each source has been unreachable, in `.refmark/<manifest name>/reach.json`, and reports list the longest-unreachable first with the date and number of failed checks. Sources that answer again leave the record.
+- A coverage line counts sources checked by page content, through another URL, by availability only, and not verified. A source checked through another URL says so in its report line.
+- [Unreachable sources](docs/unreachable.md) explains the history and the routes for a refusing host: an official API, availability only, an archive copy, or manual review.
+
 ## v0.1.8 - 2026-11-20
 
 ### Changed
