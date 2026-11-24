@@ -9,6 +9,7 @@ import { hashContent } from './normalize.mjs';
 import { summarize, unified } from './diff.mjs';
 import { scopeKey, saveLock, saveJson } from './manifest.mjs';
 import { runPool } from './pool.mjs';
+import { loadReach, updateReach, annotateReach, saveReach } from './reach.mjs';
 
 // What each status means for the exit code: failing statuses need a person to look
 export const FAILING = new Set(['changed', 'broken', 'scope-lost', 'rescoped']);
@@ -18,7 +19,9 @@ export const WARNING = new Set(['new', 'unreachable', 'error']);
 
 // Fetches and compares one reference. Returns a result object; never throws for a bad source.
 export async function inspect(ref, entry, settings, fetchCache = new Map()) {
+  // `via` names the host actually asked when a source is checked through another URL
   const base = { id: ref.id, url: ref.url, title: ref.title };
+  if (ref.fetch) base.via = hostOf(ref.fetch);
   const keyNow = scopeKey(ref);
   const conditional = entry && entry.scopeKey === keyNow ? { etag: entry.etag, lastModified: entry.lastModified } : {};
   const options = {
@@ -44,7 +47,7 @@ export async function inspect(ref, entry, settings, fetchCache = new Map()) {
     return { ...base, ...http, status, error: res.error };
   }
   if (res.status === 304) {
-    return { ...base, ...http, status: 'same', hash: entry.hash, moved, notModified: true };
+    return { ...base, ...http, status: 'same', mode: entry.mode, hash: entry.hash, moved, notModified: true };
   }
   if (!res.body) {
     const status = res.status === 404 || res.status === 410 ? 'broken' : 'unreachable';
@@ -85,8 +88,9 @@ export async function inspect(ref, entry, settings, fetchCache = new Map()) {
 // ---- Checking a manifest ----
 
 // Checks references and maintains the cache: snapshots for unchanged sources are filled in when
-// missing (they equal the accepted text), and changed text is held in pending/ for accept().
-export async function check(references, lock, settings, paths, { onResult } = {}) {
+// missing (they equal the accepted text), changed text is held in pending/ for accept(), and the
+// unreachable history is updated. `known` is every manifest id, so history for removed sources is dropped.
+export async function check(references, lock, settings, paths, { onResult, now = new Date(), known } = {}) {
   const fetchCache = new Map();
   const results = await runPool(references, (ref) => inspect(ref, lock.references[ref.id], settings, fetchCache), {
     concurrency: settings.concurrency ?? 8,
@@ -111,7 +115,11 @@ export async function check(references, lock, settings, paths, { onResult } = {}
     }
   }
   saveJson(paths.pendingIndex, pendingIndex);
-  return results;
+
+  // Record how long each source has been unreachable, and show that age on the results
+  const reach = updateReach(loadReach(paths.reach), results, { now, known });
+  saveReach(paths.reach, reach);
+  return annotateReach(results, reach, now);
 }
 
 // ---- Accepting ----
@@ -160,6 +168,15 @@ export async function accept(references, lock, settings, paths, { prune = false 
 }
 
 // ---- Helpers ----
+
+// The host of a URL, or the URL itself when it does not parse
+function hostOf(url) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url;
+  }
+}
 
 // Short pages that ask the visitor to prove they are human. Long pages that merely mention a
 // CAPTCHA are left alone.

@@ -27,6 +27,7 @@ export function pathsFor(manifestPath) {
     snapshots: join(cache, 'snapshots'),
     pending: join(cache, 'pending'),
     pendingIndex: join(cache, 'pending.json'),
+    reach: join(cache, 'reach.json'),
   };
 }
 

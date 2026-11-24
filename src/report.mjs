@@ -14,9 +14,25 @@ const LABEL = {
   same: 'unchanged',
 };
 
-// Groups results by status in a fixed order of urgency
+// Groups results by status in a fixed order of urgency. Unreachable sources list the longest
+// unreachable first, since those are the ones to move to another route or drop.
 function grouped(results) {
-  return ORDER.map((status) => [status, results.filter((r) => r.status === status)]).filter(([, list]) => list.length);
+  return ORDER.map((status) => [status, results.filter((r) => r.status === status)])
+    .filter(([, list]) => list.length)
+    .map(([status, list]) => [status, status === 'unreachable' ? [...list].sort(byAge) : list]);
+}
+
+// Oldest first; sources with no history sort after those with one
+function byAge(a, b) {
+  return (a.unreachableSince || '9999').localeCompare(b.unreachableSince || '9999') || a.id.localeCompare(b.id);
+}
+
+// How long a source has been unreachable, in words
+function ageText(r) {
+  if (!r.unreachableSince) return '';
+  const days = r.unreachableDays;
+  const since = days === 0 ? 'unreachable today' : `unreachable for ${days} ${days === 1 ? 'day' : 'days'} (since ${r.unreachableSince})`;
+  return `${since}, ${r.unreachableChecks} ${r.unreachableChecks === 1 ? 'check' : 'checks'}`;
 }
 
 // One line describing why a result matters
@@ -24,6 +40,8 @@ function detail(r) {
   const bits = [];
   if (r.diff) bits.push(`${r.diff.size}: +${r.diff.added} -${r.diff.removed} lines`);
   if (r.error) bits.push(r.error);
+  if (r.status === 'unreachable') bits.push(ageText(r));
+  if (r.via && r.status !== 'same') bits.push(`checked through ${r.via}`);
   if (r.moved) bits.push(`now at ${r.finalUrl}`);
   if (r.note) bits.push(r.note);
   return bits.join('; ');
@@ -42,8 +60,26 @@ export function formatText(results, { verbose = false } = {}) {
       if (verbose && r.diff?.preview) lines.push(r.diff.preview.split('\n').map((l) => '      ' + l).join('\n'));
     }
   }
-  lines.push(summaryLine(results));
+  lines.push(summaryLine(results), coverageLine(results));
   return lines.join('\n');
+}
+
+// How each source was checked: by its own page, through another URL, by availability only, or
+// not at all. A source that never answered counts as not verified whatever route it was given.
+export function coverage(results) {
+  const tally = { page: 0, through: 0, availability: 0, unverified: 0 };
+  for (const r of results) {
+    if (r.status === 'unreachable' || r.status === 'error') tally.unverified++;
+    else if (r.via) tally.through++;
+    else if (r.mode === 'status') tally.availability++;
+    else tally.page++;
+  }
+  return tally;
+}
+
+export function coverageLine(results) {
+  const c = coverage(results);
+  return `Coverage: ${c.page} by page content, ${c.through} through another URL, ${c.availability} availability only, ${c.unverified} not verified`;
 }
 
 export function summaryLine(results) {
@@ -57,7 +93,7 @@ export function summaryLine(results) {
 // point at the documents that rely on it.
 export function formatMarkdown(results, references, { title = 'Sources changed', linkBase } = {}) {
   const byId = new Map(references.map((r) => [r.id, r]));
-  const out = [`## ${title}`, '', summaryLine(results), ''];
+  const out = [`## ${title}`, '', summaryLine(results), '', coverageLine(results), ''];
   for (const [status, list] of grouped(results)) {
     if (status === 'same') continue;
     out.push(`### ${LABEL[status][0].toUpperCase()}${LABEL[status].slice(1)} (${list.length})`, '');
