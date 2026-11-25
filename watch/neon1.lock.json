@@ -3946,17 +3946,6 @@
       "etag": "\"f00a82682fe2500207cea219e3c152d6\"",
       "lastModified": "Mon, 02 Nov 2026 18:09:32 GMT",
       "acceptedAt": "2026-11-12T04:19:51.045Z"
-    },
-    "xenoss.io": {
-      "url": "https://xenoss.io/",
-      "finalUrl": "https://xenoss.io/",
-      "http": 200,
-      "contentType": "text/html; charset=UTF-8",
-      "mode": "status",
-      "hash": "sha256:6ef788f215cfb10bfc09047fa20e07171e49557482bbddb3b5998e8d02d347dc",
-      "scopeKey": "{\"fetch\":null,\"mode\":\"status\",\"scope\":null,\"ignore\":[],\"defaultIgnore\":true}",
-      "lastModified": "Tue, 03 Nov 2026 18:38:05 GMT",
-      "acceptedAt": "2026-11-12T04:19:51.045Z"
     }
   }
 }

@@ -4128,16 +4128,6 @@
         "neon1llc/neon1-corpus/corpus/company/sources.md",
         "neon1llc/neon1-corpus/corpus/standards/documentation.md"
       ]
-    },
-    {
-      "id": "xenoss.io",
-      "url": "https://xenoss.io/",
-      "title": "Xenoss",
-      "citedIn": [
-        "neon1llc/neon1-corpus/corpus/case-studies/answers-in-seconds.md",
-        "neon1llc/neon1-corpus/corpus/case-studies/intake-out-of-the-inbox.md",
-        "neon1llc/neon1-site/src/app/public/index.html"
-      ]
     }
   ]
 }
