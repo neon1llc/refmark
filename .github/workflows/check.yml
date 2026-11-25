@@ -11,16 +11,46 @@ permissions:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    # Cover supported Node LTS lines on every advertised desktop platform
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [22, 24, 26]
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
           cache: npm
       - run: npm ci
       - name: Run tests
-        run: npm test
+        run: npm run check
       # Offline only: the manifest is valid and every lockfile entry belongs to a listed source
-      - name: Validate the neon1 manifest
-        run: node bin/refmark.mjs validate --manifest watch/neon1.json
+      # Install the packed artifact into an empty prefix to exercise its published file list and bin entry
+      - name: Check clean package install
+        shell: bash
+        run: |
+          prefix="$RUNNER_TEMP/refmark-install"
+          archive="$(npm pack --pack-destination "$RUNNER_TEMP")"
+          npm install --prefix "$prefix" "$RUNNER_TEMP/$archive"
+          node "$prefix/node_modules/refmark/bin/refmark.mjs" --help
+          node "$prefix/node_modules/refmark/bin/refmark.mjs" validate --manifest watch/neon1.json
+
+  # Use the MIT-licensed Gitleaks CLI directly, avoiding an action dependency and write permissions
+  secrets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: stable
+      - name: Install Gitleaks
+        run: |
+          go install github.com/zricethezav/gitleaks/v8@v8.30.1
+      - name: Scan repository files
+        run: |
+          "$(go env GOPATH)/bin/gitleaks" dir --no-banner --redact --exit-code 1 .

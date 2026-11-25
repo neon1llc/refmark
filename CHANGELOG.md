@@ -4,7 +4,20 @@ Refmark uses `v0.MINOR.PATCH` until v1.0.0, following neon1's [versioning standa
 
 ## Unreleased
 
+### Changed
+- Require Node.js 22 or later, the earliest currently supported LTS line tested by CI.
+- Test Node.js 22, 24, and 26 on Linux, macOS, and Windows, install the packed package into a clean prefix, and scan source files for secrets.
+- Pin workflow actions to immutable commits, including the action updates from open PR #1.
+- The current neon1 watch manifest contains 439 sources; issue #3's 440-source report predates the latest manifest change.
+
 ### Added
+- [v1.0 readiness criteria](docs/v1-readiness.md) covering install, platform, CLI, errors, security, upgrade, documentation, and outside use.
+- A regression test for HTTP 202 responses, which do not contain a completed source representation.
+
+### Fixed
+- HTTP 202 responses now report as unreachable instead of recording an empty page as a content change.
+- Failed and unverified rechecks clear pending content, so a stale result cannot be accepted as current.
+
 - `check` records how long each source has been unreachable, in `.refmark/<manifest name>/reach.json`, and reports list the longest-unreachable first with the date and number of failed checks. Sources that answer again leave the record.
 - A coverage line counts sources checked by page content, through another URL, by availability only, and not verified. A source checked through another URL says so in its report line.
 - [Unreachable sources](docs/unreachable.md) explains the history and the routes for a refusing host: an official API, availability only, an archive copy, or manual review.

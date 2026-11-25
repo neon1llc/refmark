@@ -1,4 +1,5 @@
 // Tests for manifest validation, ids, selection, and derived paths
+import { resolve } from 'node:path';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateManifest, idFromUrl, select, pathsFor, scopeKey } from '../src/manifest.mjs';
@@ -31,7 +32,7 @@ test('select matches exact ids first, then parts of ids or URLs', () => {
 
 test('paths sit beside the manifest and scope keys track what is hashed', () => {
   const p = pathsFor('/x/watch/docs.json');
-  assert.equal(p.lock, '/x/watch/docs.lock.json');
-  assert.equal(p.snapshots, '/x/watch/.refmark/docs/snapshots');
+  assert.equal(p.lock, resolve('/x/watch/docs.lock.json'));
+  assert.equal(p.snapshots, resolve('/x/watch/.refmark/docs/snapshots'));
   assert.notEqual(scopeKey({ scope: { selector: 'main' } }), scopeKey({}));
 });

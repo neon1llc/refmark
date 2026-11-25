@@ -62,6 +62,11 @@ export async function inspect(ref, entry, settings, fetchCache = new Map()) {
     return { ...base, ...http, mode: 'status', hash, text: 'reachable', moved, scopeKey: keyNow, status, previousHash: entry?.hash };
   }
 
+  // HTTP 202 says work was accepted, not that this response is the source representation
+  if (res.status === 202) {
+    return { ...base, ...http, status: 'unreachable', error: 'HTTP 202 Accepted response is incomplete', moved };
+  }
+
   let content;
   try {
     content = extract(ref, res.body, res.contentType);
@@ -102,10 +107,12 @@ export async function check(references, lock, settings, paths, { onResult, now =
   const pendingIndex = readPending(paths);
   for (const r of results) {
     const snapPath = join(paths.snapshots, `${r.id}.txt`);
-    if (r.status === 'same') {
+    if (!['changed', 'new', 'rescoped'].includes(r.status)) {
+      // A failed or unverified fetch cannot remain an acceptable pending state
       delete pendingIndex[r.id];
-      if (r.text !== undefined && !existsSync(snapPath)) writeText(snapPath, r.text);
-    } else if (['changed', 'new', 'rescoped'].includes(r.status)) {
+      rmSync(join(paths.pending, `${r.id}.txt`), { force: true });
+      if (r.status === 'same' && r.text !== undefined && !existsSync(snapPath)) writeText(snapPath, r.text);
+    } else {
       if (r.status === 'changed' && r.text !== undefined && existsSync(snapPath)) {
         const { added, removed, ratio, size, ops } = summarize(readFileSync(snapPath, 'utf8'), r.text);
         r.diff = { added, removed, ratio, size, preview: unified(ops) };
