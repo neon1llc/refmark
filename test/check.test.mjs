@@ -8,16 +8,21 @@ import { mkdtempSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { check, accept } from '../src/check.mjs';
-import { loadLock, pathsFor } from '../src/manifest.mjs';
+import { loadLock, pathsFor, scopeKey } from '../src/manifest.mjs';
 import { main } from '../src/cli.mjs';
 
 const pages = {};
 let server;
 let origin;
+let incompleteResponse = false;
 
 // Serves whatever is in pages, with an ETag so conditional requests can be tested
 before(async () => {
   server = createServer((req, res) => {
+    if (req.url === '/accepted') {
+      if (incompleteResponse) return res.writeHead(202, { 'content-type': 'text/html' }).end();
+      return res.writeHead(200, { 'content-type': 'text/html' }).end(html('<p>Current page.</p>'));
+    }
     const page = pages[req.url];
     if (!page) return res.writeHead(404).end('missing');
     if (page.redirect) return res.writeHead(301, { location: page.redirect }).end();
@@ -75,6 +80,35 @@ test('chrome-only edits do not count as changes', async () => {
   pages['/chrome'] = { body: html('<p>Stable.</p>').replace('menu', 'new menu') };
   const [r] = await check(refs, loadLock(paths.lock), {}, paths);
   assert.equal(r.status, 'same');
+});
+
+// An accepted asynchronous request is not a complete page to fingerprint
+test('a 202 response stays unverified instead of becoming an empty-content change', async () => {
+  incompleteResponse = false;
+  const ref = { id: 'accepted', url: `${origin}/accepted` };
+  const { paths } = workspace([ref]);
+  const lock = {
+    references: {
+      accepted: { url: ref.url, scopeKey: scopeKey(ref), hash: 'sha256:previous', mode: 'html' },
+    },
+  };
+
+  let [result] = await check([ref], lock, { timeout: 5000 }, paths);
+  assert.equal(result.status, 'changed');
+
+  incompleteResponse = true;
+  [result] = await check([ref], lock, { timeout: 5000 }, paths);
+
+  assert.equal(result.status, 'unreachable');
+  assert.equal(result.error, 'HTTP 202 Accepted response is incomplete');
+  assert.equal(result.hash, undefined);
+  assert.deepEqual(JSON.parse(readFileSync(paths.pendingIndex, 'utf8')), {});
+  assert.equal(existsSync(`${paths.pending}/accepted.txt`), false);
+
+  const outcome = await accept([ref], lock, { timeout: 5000 }, paths);
+  assert.deepEqual(outcome.skipped, [{ id: 'accepted', reason: 'unreachable: HTTP 202 Accepted response is incomplete' }]);
+  assert.equal(lock.references.accepted.hash, 'sha256:previous');
+  incompleteResponse = false;
 });
 
 test('broken links, lost scopes, edited scopes, and redirects are reported', async () => {
